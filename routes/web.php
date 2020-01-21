@@ -31,3 +31,12 @@ Route::prefix('admin')->group(function () {
     Route::post('logout', 'Admin\LoginController@logout')->name('admin.auth.logout');
 
 });
+
+Route::post('addproductsStore','AdminController@addproductsStore')->name('addproductsStore');
+Route::get('addproducts', 'AdminController@addproducts')->name('addproducts');
+Route::get('allproducts', 'AdminController@allproducts')->name('allproducts');
+
+Route::get('addManufacture', 'AdminController@addManufacture')->name('addManufacture');
+Route::get('allManufacture', 'AdminController@allManufacture')->name('allManufacture');
+Route::post('addManufactureStore', 'AdminController@addManufactureStore')->name('addManufactureStore');
+
