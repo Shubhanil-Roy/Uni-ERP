@@ -19,6 +19,7 @@ class CreateDealersTable extends Migration
             $table->string('phone');
             $table->string('email');
             $table->text('address');
+            $table->string('password');
             $table->timestamps();
         });
     }

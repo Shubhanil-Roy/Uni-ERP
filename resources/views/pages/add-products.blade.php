@@ -1,8 +1,9 @@
-
 @extends('base')
 @section('content')
 
-
+    <!-- ============================================================== -->
+    <!-- Page wrapper  -->
+    <!-- ============================================================== -->
     <div class="page-wrapper">
         <div class="row page-titles">
             <div class="col-md-5 align-self-center">
@@ -11,7 +12,7 @@
             <div class="col-md-7 align-self-center">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                    <li class="breadcrumb-item">Product</li>
+                    <li class="breadcrumb-item">Products</li>
                     <li class="breadcrumb-item active">Add Product</li>
                 </ol>
             </div>
@@ -25,7 +26,8 @@
                             <h4 class="m-b-0 text-white">Add Product</h4>
                         </div>
                         <div class="card-body">
-                            <form action="{{route('addproductsStore')}}" class="form-horizontal" method="post" enctype="multipart/form-data">
+                            <form action="#" class="form-horizontal" method="post"
+                                  enctype="multipart/form-data">
                                 {{csrf_field()}}
                                 <div class="form-body">
                                     <hr class="m-t-0 m-b-40">
@@ -33,25 +35,12 @@
                                     <div class="row">
                                         <div class="col-md-8">
                                             <div class="form-group row">
-                                                <label for="sl_no"
-                                                       class="col-md-3 text-right col-form-label">Sl No</label>
-                                                <div class="col-md-8">
-                                                    <div class="form-group green-border-focus">
-                                                        <input type="number"  class="form-control" name="sl_no"  value="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-8">
-                                            <div class="form-group row">
                                                 <label for="identity"
-                                                       class="col-md-3 text-right col-form-label">Product Identity</label>
+                                                       class="col-md-3 text-right col-form-label">Identity</label>
                                                 <div class="col-md-8">
                                                     <div class="form-group green-border-focus">
-                                                        <input type="text" class="form-control" name="identity"> </input>
+                                                        <input type="text" class="form-control" name="identity"
+                                                               id="identity" value="">
                                                     </div>
                                                 </div>
                                             </div>
@@ -62,15 +51,17 @@
                                         <div class="col-md-8">
                                             <div class="form-group row">
                                                 <label for="name"
-                                                       class="col-md-3 text-right col-form-label">Product Name</label>
+                                                       class="col-md-3 text-right col-form-label">Name</label>
                                                 <div class="col-md-8">
                                                     <div class="form-group green-border-focus">
-                                                        <input type="text" class="form-control" name="name"> </input>
+                                                        <input type="text" class="form-control"
+                                                               name="name" id="name"> </input>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+
                                     <div class="row">
                                         <div class="col-md-8">
                                             <div class="form-group row">
@@ -78,14 +69,13 @@
                                                        class="col-md-3 text-right col-form-label">Length</label>
                                                 <div class="col-md-8">
                                                     <div class="form-group green-border-focus">
-                                                        <input type="number" class="form-control" name="length" value="">
-
+                                                        <input type="text" class="form-control" name="length"
+                                                               id="length"> </input>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="row">
                                         <div class="col-md-8">
                                             <div class="form-group row">
@@ -93,7 +83,7 @@
                                                        class="col-md-3 text-right col-form-label">Width</label>
                                                 <div class="col-md-8">
                                                     <div class="form-group green-border-focus">
-                                                        <input type="number" class="form-control" name="width" value="">
+                                                        <input type="text" class="form-control" name="width" id="width">
 
                                                     </div>
                                                 </div>
@@ -104,18 +94,18 @@
                                     <div class="row">
                                         <div class="col-md-8">
                                             <div class="form-group row">
-                                                <label for="heigth"
+                                                <label for="height"
                                                        class="col-md-3 text-right col-form-label">Height</label>
                                                 <div class="col-md-8">
                                                     <div class="form-group green-border-focus">
-                                                        <input type="number" class="form-control" name="heigth" value="">
+                                                        <input type="text" class="form-control" name="height"
+                                                               id="height">
 
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="row">
                                         <div class="col-md-8">
                                             <div class="form-group row">
@@ -123,92 +113,97 @@
                                                        class="col-md-3 text-right col-form-label">Price</label>
                                                 <div class="col-md-8">
                                                     <div class="form-group green-border-focus">
-                                                        <input type="number" min="0" class="form-control" name="price"  value="">
+                                                        <input type="text" class="form-control" name="price" id="price">
+
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-8">
-                                            <div class="form-group row">
-                                                <label for="manufacturing_date"
-                                                       class="col-md-3 text-right col-form-label">Manufacturing Date</label>
-                                                <div class="col-md-8">
-                                                    <div class="form-group green-border-focus">
-                                                        <input type="date"  class="form-control" name="manufacturing_date"  value="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-8">
-                                            <div class="form-group row">
-                                                <label for="manufacturing_place_id"
-                                                       class="col-md-3 text-right col-form-label">Manufacturing Place ID</label>
-                                                <div class="col-md-8">
-                                                    <div class="form-group green-border-focus">
-                                                        <input type="date"  class="form-control" name="manufacturing_place_id"  value="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="row">
-                                        <div class="col-md-8">
-                                            <div class="form-group row">
-                                                <label for="warranty_time"
-                                                       class="col-md-3 text-right col-form-label">Warranty Time</label>
-                                                <div class="col-md-8">
-                                                    <div class="form-group green-border-focus">
-                                                        <input type="number"  class="form-control" name="warranty_time"  value="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                   {{-- <div class="row">
-                                        <div class="col-md-8">
-                                            <div class="form-group row">
-                                                <label for="warranty_time"
-                                                       class="col-md-3 text-right col-form-label">QR Code</label>
-                                                <div class="col-md-8">
-                                                    <div class="form-group green-border-focus">
-                                                        <input type="file"  class="form-control" name="warranty_time"  value="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>--}}
-
-
-
-
-                                    <div class="form-actions">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="row">
-                                                    <div class="col-md-offset-3 col-md-9">
-                                                        <button type="submit" class="btn btn-success">Submit</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6"> </div>
                                         </div>
                                     </div>
                                 </div>
-                            </form>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="form-group row">
+                                            <label for="manufacturing_date" class="col-md-3 text-right col-form-label">Manufacturing
+                                                Date</label>
+                                            <div class="col-md-8">
+                                                <div class="form-group green-border-focus">
+                                                    <input type="text" class="form-control" name="manufacturing_date"
+                                                           id="manufacturing_date">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="form-group row">
+                                            <label for="manufacturing_place_id"
+                                                   class="col-md-3 text-right col-form-label">Factory</label>
+                                            <div class="col-md-8">
+                                                <div class="form-group green-border-focus">
+                                                    {{--<input type="text" class="form-control"
+                                                           name="manufacturing_place_id" id="manufacturing_place_id">--}}
+                                                    <select name="manufacturing_place_id" id="manufacturing_place_id" class="form-control">
+                                                        <option>none</option>
+                                                        @foreach($factories as $factory)
+                                                        <option value="{{$factory->id}}">{{$factory->name}}</option>
+                                                        @endforeach
+                                                        {{--<option>3</option>
+                                                        <option>4</option>
+                                                        <option>5</option>--}}
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="form-group row">
+                                            <label for="warranty_time" class="col-md-3 text-right col-form-label">Warranty</label>
+                                            <div class="col-md-8">
+                                                <div class="form-group green-border-focus">
+                                                    {{--<input type="text" class="form-control" name="warranty_time"
+                                                           id="warranty_time">--}}
+                                                    <select class="form-control">
+                                                        <option>Years</option>
+                                                        <option value="1">1</option>
+                                                        <option value="3">3</option>
+                                                        <option value="5">5</option>
+                                                        <option value="10">10</option>
+                                                    </select>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-actions">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="row">
+                                                <div class="col-md-offset-3 col-md-9">
+                                                    <button type="submit" class="btn btn-success">Submit</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6"></div>
+                                    </div>
+                                </div>
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Page wrapper  -->
+    <!-- ============================================================== -->
 @stop

@@ -14,7 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+/*Route::get('qrcode', function () {
+    return QrCode::size(300)->generate('A basic example of QR code!');
+});*/
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -32,11 +34,12 @@ Route::prefix('admin')->group(function () {
 
 });
 
-Route::post('addproductsStore','AdminController@addproductsStore')->name('addproductsStore');
-Route::get('addproducts', 'AdminController@addproducts')->name('addproducts');
-Route::get('allproducts', 'AdminController@allproducts')->name('allproducts');
+Route::post('addproductsStore','Admin\AdminController@addproductsStore')->name('addproductsStore');
+Route::get('addproducts', 'Admin\AdminController@addproducts')->name('addproducts');
+Route::get('allproducts', 'Admin\AdminController@allproducts')->name('allproducts');
+Route::get('dropfactory/{id}', 'Admin\AdminController@dropFactory')->name('dropFactory');
 
-Route::get('addManufacture', 'AdminController@addManufacture')->name('addManufacture');
-Route::get('allManufacture', 'AdminController@allManufacture')->name('allManufacture');
-Route::post('addManufactureStore', 'AdminController@addManufactureStore')->name('addManufactureStore');
+Route::get('addfactory', 'Admin\AdminController@addManufacture')->name('addManufacture');
+Route::get('allfactories', 'Admin\AdminController@allManufacture')->name('allManufacture');
+Route::post('addfactory', 'Admin\AdminController@addManufactureStore')->name('addManufactureStore');
 

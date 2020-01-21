@@ -1,4 +1,3 @@
-
 @extends('base')
 @section('content')
 
@@ -6,13 +5,13 @@
     <div class="page-wrapper">
         <div class="row page-titles">
             <div class="col-md-5 align-self-center">
-                <h3 class="text-themecolor">Add Manufacture</h3>
+                <h3 class="text-themecolor">Add Factory</h3>
             </div>
             <div class="col-md-7 align-self-center">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                    <li class="breadcrumb-item">Manufacture</li>
-                    <li class="breadcrumb-item active">Add Manufacture</li>
+                    <li class="breadcrumb-item">Factories</li>
+                    <li class="breadcrumb-item active">Add Factories</li>
                 </ol>
             </div>
 
@@ -22,10 +21,11 @@
                 <div class="col-lg-12">
                     <div class="card card-outline-info">
                         <div class="card-header">
-                            <h4 class="m-b-0 text-white">Add Manufacture</h4>
+                            <h4 class="m-b-0 text-white">Add Factories</h4>
                         </div>
                         <div class="card-body">
-                            <form action="{{route('addManufacture')}}" class="form-horizontal" method="post" enctype="multipart/form-data">
+                            <form action="{{route('addManufactureStore')}}" class="form-horizontal" method="post"
+                                  enctype="multipart/form-data">
                                 {{csrf_field()}}
                                 <div class="form-body">
                                     <hr class="m-t-0 m-b-40">
@@ -34,10 +34,11 @@
                                         <div class="col-md-8">
                                             <div class="form-group row">
                                                 <label for="name"
-                                                       class="col-md-3 text-right col-form-label">Manufacture Name</label>
+                                                       class="col-md-3 text-right col-form-label">Manufacture
+                                                    Name</label>
                                                 <div class="col-md-8">
                                                     <div class="form-group green-border-focus">
-                                                        <input type="text"  class="form-control" name="name"  value="">
+                                                        <input type="text" class="form-control" name="name" value="">
                                                     </div>
                                                 </div>
                                             </div>
@@ -48,10 +49,12 @@
                                         <div class="col-md-8">
                                             <div class="form-group row">
                                                 <label for="short_name"
-                                                       class="col-md-3 text-right col-form-label">Manufacture short_name</label>
+                                                       class="col-md-3 text-right col-form-label">Manufacture
+                                                    short_name</label>
                                                 <div class="col-md-8">
                                                     <div class="form-group green-border-focus">
-                                                        <input type="text" class="form-control" name="short_name"> </input>
+                                                        <input type="text" class="form-control"
+                                                               name="short_name"> </input>
                                                     </div>
                                                 </div>
                                             </div>
@@ -102,7 +105,6 @@
                                     </div>
 
 
-
                                     <div class="form-actions">
                                         <div class="row">
                                             <div class="col-md-6">
@@ -112,7 +114,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-6"> </div>
+                                            <div class="col-md-6"></div>
                                         </div>
                                     </div>
                                 </div>

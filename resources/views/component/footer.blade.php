@@ -1,7 +1,7 @@
 <!-- footer -->
 <!-- ============================================================== -->
 <footer class="footer">
-    © 2020 Admin PanelAdmin by Uniluxx
+    © 2020 Admin PanelAdmin by Tecions
 </footer>
 <!-- ============================================================== -->
 <!-- End footer -->

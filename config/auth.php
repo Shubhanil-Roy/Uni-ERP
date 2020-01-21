@@ -56,6 +56,16 @@ return [
             'provider' => 'admins',
             'hash' => false,
         ],
+        'dealer' => [
+            'driver' => 'session',
+            'provider' => 'dealers',
+        ],
+
+        'dealer-api' => [
+            'driver' => 'passport',
+            'provider' => 'dealers',
+            'hash' => false,
+        ],
     ],
 
     /*
@@ -83,6 +93,10 @@ return [
         'admins' => [
             'driver' => 'eloquent',
             'model' => App\Model\Admin::class,
+        ],
+        'dealers' => [
+            'driver' => 'eloquent',
+            'model' => App\Model\Dealer::class,
         ],
 
         // 'users' => [
@@ -114,6 +128,11 @@ return [
         ],
         'admins' => [
             'provider' => 'admins',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
+        'dealers' => [
+            'provider' => 'dealers',
             'table' => 'password_resets',
             'expire' => 60,
         ],

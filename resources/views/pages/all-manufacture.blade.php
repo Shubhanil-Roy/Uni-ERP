@@ -46,21 +46,31 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    {{--@foreach($allrooms as $allroom)
+                                    @foreach($factories as $factory)
                                         <tr>
-                                            <td>{{$allroom->id}}</td>
-                                            <td>{{$allroom->name}}</td>
-                                            <td>{{$allroom->short_name}}</td>
-                                            <td>{{$allroom->address}}</td>
-                                            <td>{{$allroom->phone}}</td>
-                                            <td>{{$allroom->email}}</td>
+                                            <td>{{$factory->id}}</td>
+                                            <td>{{$factory->name}}</td>
+                                            <td>{{$factory->short_name}}</td>
+                                            <td>{{$factory->address}}</td>
+                                            <td>{{$factory->phone}}</td>
+                                            <td>{{$factory->email}}</td>
                                            <td>
-                                                <button type="button" class="btn btn-outline-danger" >Delete</button>
-                                                <button type="button" class="btn btn-outline-primary" onclick="location.href='{{ url('deleteProduct') }}'">Edit</button>
+                                                <button type="button" class="btn btn-outline-danger" onclick="window.location.href='{{route('dropFactory', $factory->id)}}'">Delete</button>
                                             </td>
                                         </tr>
-                                    @endforeach--}}
+                                    @endforeach
                                     </tbody>
+                                    <tfoot>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Name</th>
+                                        <th>Short Name</th>
+                                        <th>Address</th>
+                                        <th>Phone</th>
+                                        <th>Email</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    </tfoot>
                                 </table>
                             </div>
                         </div>
