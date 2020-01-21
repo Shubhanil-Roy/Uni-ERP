@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdf3e035-e170-4fd8-b420-49f4c489c33d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/Customer.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/Warranty.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_21_185854_create_dealer_to_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_01_21_185854_create_dealer_to_products_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_21_190354_create_warranties_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_21_190730_create_customers_table.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,22 +179,36 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579607525780</updated>
-      <workItem from="1579607528211" duration="8897000" />
+      <workItem from="1579607528211" duration="9069000" />
     </task>
+    <task id="LOCAL-00001" summary="Remove Customer Section">
+      <created>1579617863056</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1579617863056</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="Remove Customer Section" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove Customer Section" />
   </component>
   <component name="WindowStateProjectService">
     <state x="174" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579608689589">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="174" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.860@0.0.1440.860" timestamp="1579608689589" />
-    <state x="343" y="0" key="CommitChangelistDialog2" timestamp="1579617838169">
+    <state x="343" y="0" key="CommitChangelistDialog2" timestamp="1579617862178">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="343" y="0" key="CommitChangelistDialog2/0.0.1440.860@0.0.1440.860" timestamp="1579617838169" />
+    <state x="343" y="0" key="CommitChangelistDialog2/0.0.1440.860@0.0.1440.860" timestamp="1579617862178" />
     <state width="1397" height="202" key="GridCell.Tab.0.bottom" timestamp="1579607609551">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
@@ -224,6 +233,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="554" y="350" key="NewPhpFileDialog/0.0.1440.860@0.0.1440.860" timestamp="1579608643510" />
+    <state x="312" y="160" key="Vcs.Push.Dialog.v2" timestamp="1579617869704">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="312" y="160" key="Vcs.Push.Dialog.v2/0.0.1440.860@0.0.1440.860" timestamp="1579617869704" />
     <state x="507" y="46" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1579612889762">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
