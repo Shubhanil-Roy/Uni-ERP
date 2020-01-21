@@ -15,11 +15,14 @@ class CreateDealerToProductsTable extends Migration
     {
         Schema::create('dealer_to_products', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('dealer_id');
+            $table->string('dealer_id');  /**/
             $table->string('invoice_no');
-            $table->string('product_id');
+            $table->string('product_id');  /**/
             $table->date('invoice_date');
-            $table->string('customer_id');
+            $table->string('name');
+            $table->string('phone');
+            $table->string('email')->nullable();
+            $table->text('address');
             $table->timestamps();
         });
     }

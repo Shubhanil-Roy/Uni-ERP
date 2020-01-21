@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdf3e035-e170-4fd8-b420-49f4c489c33d" name="Default Changelist" comment="" />
+    <list default="true" id="cdf3e035-e170-4fd8-b420-49f4c489c33d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Customer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Warranty.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_21_185854_create_dealer_to_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_01_21_185854_create_dealer_to_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_21_190354_create_warranties_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_21_190730_create_customers_table.php" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +34,9 @@
     </option>
     <expand />
     <select />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -114,6 +125,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1Whh2P2RakD2nZX9K0HhOaMu9Pq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -122,6 +134,7 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -171,7 +184,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579607525780</updated>
-      <workItem from="1579607528211" duration="7500000" />
+      <workItem from="1579607528211" duration="8897000" />
     </task>
     <servers />
   </component>
@@ -183,6 +196,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="174" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.860@0.0.1440.860" timestamp="1579608689589" />
+    <state x="343" y="0" key="CommitChangelistDialog2" timestamp="1579617838169">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="343" y="0" key="CommitChangelistDialog2/0.0.1440.860@0.0.1440.860" timestamp="1579617838169" />
     <state width="1397" height="202" key="GridCell.Tab.0.bottom" timestamp="1579607609551">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
