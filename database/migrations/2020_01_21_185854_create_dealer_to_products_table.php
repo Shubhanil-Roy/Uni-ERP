@@ -19,7 +19,10 @@ class CreateDealerToProductsTable extends Migration
             $table->string('invoice_no');
             $table->string('product_id');
             $table->date('invoice_date');
-            $table->string('customer_id');
+            $table->string('name');
+            $table->string('phone');
+            $table->string('email')->nullable();
+            $table->text('address');
             $table->timestamps();
         });
     }
