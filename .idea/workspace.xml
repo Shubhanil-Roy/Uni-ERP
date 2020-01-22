@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cdf3e035-e170-4fd8-b420-49f4c489c33d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +219,7 @@
       <workItem from="1579607528211" duration="7500000" />
       <workItem from="1579616836645" duration="1370000" />
       <workItem from="1579618235492" duration="5005000" />
-      <workItem from="1579668469241" duration="10866000" />
+      <workItem from="1579668469241" duration="11173000" />
     </task>
     <task id="LOCAL-00001" summary="coommit">
       <created>1579617948919</created>
@@ -264,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579678458810</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Admin Pannel Ready for MAnufacture and Products...Some changes need in Manufacture">
+      <created>1579680518562</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1579680518562</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,10 +293,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="450" y="186" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.860@0.0.1440.860" timestamp="1579623582761" />
-    <state x="343" y="0" key="CommitChangelistDialog2" timestamp="1579678457945">
+    <state x="343" y="0" key="CommitChangelistDialog2" timestamp="1579680517565">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="343" y="0" key="CommitChangelistDialog2/0.0.1440.860@0.0.1440.860" timestamp="1579678457945" />
+    <state x="343" y="0" key="CommitChangelistDialog2/0.0.1440.860@0.0.1440.860" timestamp="1579680517565" />
     <state x="500" y="184" key="FileChooserDialogImpl" timestamp="1579618231139">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
@@ -335,18 +341,18 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="567" y="338" key="VCS.ChangelistChooser/0.0.1440.860@0.0.1440.860" timestamp="1579617973506" />
-    <state x="312" y="158" key="Vcs.Push.Dialog.v2" timestamp="1579678460219">
+    <state x="312" y="158" key="Vcs.Push.Dialog.v2" timestamp="1579680520139">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="312" y="158" key="Vcs.Push.Dialog.v2/0.0.1440.860@0.0.1440.860" timestamp="1579678460219" />
+    <state x="312" y="158" key="Vcs.Push.Dialog.v2/0.0.1440.860@0.0.1440.860" timestamp="1579680520139" />
     <state x="507" y="46" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1579612889762">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="507" y="46" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1440.860@0.0.1440.860" timestamp="1579612889762" />
-    <state x="527" y="341" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579618135626">
+    <state x="527" y="341" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579681019670">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="527" y="341" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.860@0.0.1440.860" timestamp="1579618135626" />
+    <state x="527" y="341" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.860@0.0.1440.860" timestamp="1579681019670" />
     <state x="394" y="146" width="651" height="568" key="find.popup" timestamp="1579625403551">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
