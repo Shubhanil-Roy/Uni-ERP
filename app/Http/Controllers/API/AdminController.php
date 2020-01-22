@@ -44,7 +44,7 @@ class AdminController extends Controller
     }
     public function addProductInvoice(Request $request){
         $product_invoice = new DealerToProduct();
-        $product_invoice->dealer_id = Auth::user()->id;
+        $product_invoice->dealer_id = Auth::user()->getAuthIdentifier();
         $product_invoice->invoice_no = $request->invoice_no;
         $product_invoice->product_id = $request->product_id;
         $product_invoice->invoice_date = $request->invoice_date;
