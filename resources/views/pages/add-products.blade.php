@@ -26,7 +26,7 @@
                             <h4 class="m-b-0 text-white">Add Product</h4>
                         </div>
                         <div class="card-body">
-                            <form action="#" class="form-horizontal" method="post"
+                            <form action="addproductsStore" class="form-horizontal" method="post"
                                   enctype="multipart/form-data">
                                 {{csrf_field()}}
                                 <div class="form-body">
@@ -69,7 +69,7 @@
                                                        class="col-md-3 text-right col-form-label">Length</label>
                                                 <div class="col-md-8">
                                                     <div class="form-group green-border-focus">
-                                                        <input type="text" class="form-control" name="length"
+                                                        <input type="number" class="form-control" name="length"
                                                                id="length"> </input>
                                                     </div>
                                                 </div>
@@ -83,7 +83,7 @@
                                                        class="col-md-3 text-right col-form-label">Width</label>
                                                 <div class="col-md-8">
                                                     <div class="form-group green-border-focus">
-                                                        <input type="text" class="form-control" name="width" id="width">
+                                                        <input type="number" class="form-control" name="width" id="width">
 
                                                     </div>
                                                 </div>
@@ -98,7 +98,7 @@
                                                        class="col-md-3 text-right col-form-label">Height</label>
                                                 <div class="col-md-8">
                                                     <div class="form-group green-border-focus">
-                                                        <input type="text" class="form-control" name="height"
+                                                        <input type="number" class="form-control" name="height"
                                                                id="height">
 
                                                     </div>
@@ -113,7 +113,7 @@
                                                        class="col-md-3 text-right col-form-label">Price</label>
                                                 <div class="col-md-8">
                                                     <div class="form-group green-border-focus">
-                                                        <input type="text" class="form-control" name="price" id="price">
+                                                        <input type="number" class="form-control" name="price" id="price">
 
                                                     </div>
                                                 </div>
@@ -128,7 +128,7 @@
                                                 Date</label>
                                             <div class="col-md-8">
                                                 <div class="form-group green-border-focus">
-                                                    <input type="text" class="form-control" name="manufacturing_date"
+                                                    <input type="date" class="form-control" name="manufacturing_date"
                                                            id="manufacturing_date">
 
                                                 </div>
@@ -168,7 +168,7 @@
                                                 <div class="form-group green-border-focus">
                                                     {{--<input type="text" class="form-control" name="warranty_time"
                                                            id="warranty_time">--}}
-                                                    <select class="form-control">
+                                                    <select name="warranty_time" id="warranty_time" class="form-control">
                                                         <option>Years</option>
                                                         <option value="1">1</option>
                                                         <option value="3">3</option>

@@ -17,3 +17,4 @@ Route::middleware('auth:dealer-api')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::post('addDealer', 'API\AdminController@addDealer');
+Route::get('Uni/{short_name}/{number}', 'API\AdminController@checkProductInvoice');

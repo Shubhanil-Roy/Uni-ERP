@@ -7,6 +7,7 @@ use App\Model\ManufacturePlace;
 use App\Model\Product;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class AdminController extends Controller
 {
@@ -124,7 +125,7 @@ class AdminController extends Controller
         ]);
     }
     public function addproductsStore(Request $request){
-
+        $factory = ManufacturePlace::find($request->manufacturing_place_id);
         $addproductsStore = new Product();
         $addproductsStore->identity = $request->identity;
         $addproductsStore->name = $request->name;
@@ -134,15 +135,20 @@ class AdminController extends Controller
         $addproductsStore->price = $request->price;
         $addproductsStore->manufacturing_date = $request->manufacturing_date;
         $addproductsStore->manufacturing_place_id = $request->manufacturing_place_id;
-//        $addproductsStore->sl_no = $request->sl_no;
-        /*$serialno = */
+        $serialno = 'Uni/'.$factory->short_name.'/'.rand(10000,99999);
+        $present = Product::where('sl_no', $serialno)->first();
+        if($present){
+            $serialno = 'Uni/'.$factory->short_name.'/'.rand(10000,99999);
+        }
+        $addproductsStore->sl_no = $serialno;
         $addproductsStore->warranty_time = $request->warranty_time;
+        $addproductsStore->qr_code = base64_encode(QrCode::generate(url('/').'/api/'.$serialno));
         $addproductsStore->save();
         return redirect()->route('allproducts');
     }
     public function deleteProduct(Request $request){
-        Product::find($request->id)->delete();
-        return redirect()->route('allproducts');
+        Product::findOrFail($request->id)->delete();
+        return back();
     }
 
     public function addManufactureStore(Request $request){

@@ -34,55 +34,60 @@
                                     <thead>
                                     <tr>
                                         <th>Sl No</th>
-                                        <th>Product Identity</th>
-                                        <th>Product Name</th>
+                                        <th>Identity</th>
+                                        <th>Name</th>
                                         <th>Length</th>
                                         <th>Width</th>
+                                        <th>Height</th>
                                         <th>Price</th>
-                                        <th>Manufacturing Date</th>
-                                        <th>Manufacturing Place ID</th>
-                                        <th>Warranty Time</th>
+                                        <th>Mfg Date</th>
+                                        <th>Factory</th>
+                                        <th>Warranty</th>
+                                        <th>QR Code</th>
                                         <th>Action</th>
                                     </tr>
                                     </thead>
-                                    {{--<tfoot>
-                                    <tr>
-                                        <th>id</th>
-                                        <th>Room Name</th>
-                                        <th>Room Description</th>
-                                        <th>Room Image</th>
-                                        <th>Action</th>
-                                    </tr>
-                                    </tfoot>--}}
+                                    {{----}}
                                     <tbody>
-                                    {{--@foreach($allrooms as $allroom)
-                                        <tr>
-                                            <td>{{$allroom->id}}</td>
-                                            <td>{{$allroom->name}}</td>
-                                            <td>{{$allroom->description}}</td>
-                                            <td>{{$allroom->image}}</td>
-                                            <td>{{$allroom->id}}</td>
-                                            <td>{{$allroom->name}}</td>
-                                            <td>{{$allroom->description}}</td>
-                                            <td>{{$allroom->image}}</td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-danger" >Delete</button>
-                                                <button type="button" class="btn btn-outline-primary" onclick="location.href='{{ url('deleteProduct') }}'">Edit</button>
-                                            </td>
-                                        </tr>
-                                    @endforeach--}}
-                                    {{--<tr>
-                                        <td>Jonas Alexander</td>
-                                        <td>Developer</td>
-                                        <td>San Francisco</td>
-                                        <td>30</td>
+                                    @foreach($products as $product)
+                                    <tr>
+                                        <td>{{$product->sl_no}}</td>
+                                        <td>{{$product->identity}}</td>
+                                        <td>{{$product->name}}</td>
+                                        <td>{{$product->length.' inch'}}</td>
+                                        <td>{{$product->width.' inch'}}</td>
+                                        <td>{{$product->height}}</td>
+                                        <td>{{$product->price}}</td>
+                                        <td>{{$product->manufacturing_date}}</td>
+                                        <td>{{$product->products_to_place->name}}</td>
+                                        <td>{{$product->warranty_time.' years'}}</td>
+                                        <td><img style="height: 100px; width: 100px" src="data:image/svg+xml;base64,{{$product->qr_code}}" alt="QR Code" /></td>
+{{--                                        <td>{{$product->qr_code}}</td>--}}
+
                                         <td>
                                             <button type="button"  class="btn btn-outline-danger" >Delete</button>
-                                            <button type="button" class="btn btn-outline-primary" onclick="location.href='{{ url('adminAddRoom') }}'" >Details</button>
+                                            <button type="button" class="btn btn-outline-primary" onclick="location.href='{{ url('adminAddRoom') }}'" >QR Code</button>
                                         </td>
-                                    </tr>--}}
+                                    </tr>
+                                        @endforeach
 
                                     </tbody>
+                                    <tfoot>
+                                    <tr>
+                                        <th>Sl No</th>
+                                        <th>Identity</th>
+                                        <th>Name</th>
+                                        <th>Length</th>
+                                        <th>Width</th>
+                                        <th>Height</th>
+                                        <th>Price</th>
+                                        <th>Mfg Date</th>
+                                        <th>Factory</th>
+                                        <th>Warranty</th>
+                                        <th>QR Code</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    </tfoot>
                                 </table>
                             </div>
                         </div>

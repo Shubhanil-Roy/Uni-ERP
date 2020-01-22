@@ -14,9 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
-/*Route::get('qrcode', function () {
-    return QrCode::size(300)->generate('A basic example of QR code!');
-});*/
+Route::get('qrcode', function () {
+    return base64_decode(base64_encode(QrCode::generate(url('/').'/Uni')));
+});
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
