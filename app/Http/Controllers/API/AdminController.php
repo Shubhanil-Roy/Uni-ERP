@@ -29,7 +29,12 @@ class AdminController extends Controller
         /*return response()->json([
             $product
         ]);*/
-        if($product->product_to_invoice->count() > 0){
+	$product->is_sold = true;
+        $product->save();
+        return response()->json([
+            'product' => $product
+        ], 200);
+       /*if($product->product_to_invoice->count() > 0){
             return response()->json([
                 'invoice' => $product->product_to_invoice
             ]);
@@ -39,7 +44,7 @@ class AdminController extends Controller
                 'product' => $product,
                 'warranty_void' => $product->warranty_void
             ]);
-        }
+        }*/
 
     }
     public function addProductInvoice(Request $request){
