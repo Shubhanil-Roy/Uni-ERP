@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdf3e035-e170-4fd8-b420-49f4c489c33d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/add-dealer.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/all-dealers.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/base.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/base.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/component/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/all-products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/all-products.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +167,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/pages" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -171,10 +178,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\tecions\Documents\deal_uni\resources\views\pages" />
+      <recent name="C:\Users\tecions\Documents\deal_uni" />
       <recent name="C:\Users\Tecions-Design\Documents\uniluxx-erp\app" />
       <recent name="C:\Users\Tecions-Design\Documents\uniluxx-erp\public" />
       <recent name="C:\Users\Tecios-Dev\Documents\uniluxx-erp" />
-      <recent name="C:\Users\Tecions-Design\Documents\uniluxx-erp" />
     </key>
   </component>
   <component name="RunManager" selected="Laravel.Uniluxx-ERP">
@@ -221,6 +229,7 @@
       <workItem from="1579616836645" duration="1370000" />
       <workItem from="1579618235492" duration="5005000" />
       <workItem from="1579668469241" duration="11737000" />
+      <workItem from="1581408782791" duration="5512000" />
     </task>
     <task id="LOCAL-00001" summary="coommit">
       <created>1579617948919</created>
@@ -316,21 +325,25 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="500" y="184" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1579618231139" />
-    <state width="1397" height="202" key="GridCell.Tab.0.bottom" timestamp="1579672889612">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state width="1323" height="162" key="GridCell.Tab.0.bottom" timestamp="1581409487913">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="162" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1581409487913" />
     <state width="1397" height="202" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1579672889612" />
-    <state width="1397" height="202" key="GridCell.Tab.0.center" timestamp="1579672889612">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state width="1323" height="162" key="GridCell.Tab.0.center" timestamp="1581409487913">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="162" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1581409487913" />
     <state width="1397" height="202" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1579672889612" />
-    <state width="1397" height="202" key="GridCell.Tab.0.left" timestamp="1579672889612">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state width="1323" height="162" key="GridCell.Tab.0.left" timestamp="1581409487913">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="162" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1581409487913" />
     <state width="1397" height="202" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1579672889612" />
-    <state width="1397" height="202" key="GridCell.Tab.0.right" timestamp="1579672889612">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state width="1323" height="162" key="GridCell.Tab.0.right" timestamp="1581409487913">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="162" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1581409487913" />
     <state width="1397" height="202" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1579672889612" />
     <state width="196" height="539" key="HiddenNamespacesPopup" timestamp="1579608204597">
       <screen x="0" y="0" width="1440" height="860" />
@@ -364,9 +377,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="507" y="46" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1440.860@0.0.1440.860" timestamp="1579612889762" />
-    <state x="527" y="341" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579681019670">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state x="500" y="289" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581411651252">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="500" y="289" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1581411651252" />
     <state x="527" y="341" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.860@0.0.1440.860" timestamp="1579681019670" />
     <state x="394" y="146" width="651" height="568" key="find.popup" timestamp="1579625403551">
       <screen x="0" y="0" width="1440" height="860" />

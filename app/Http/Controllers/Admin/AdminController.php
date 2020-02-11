@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Model\Admin;
+use App\Model\Dealer;
 use App\Model\ManufacturePlace;
 use App\Model\Product;
 use Illuminate\Http\Request;
@@ -173,6 +174,33 @@ class AdminController extends Controller
     }
     public function dropFactory(Request $request){
         ManufacturePlace::findOrFail($request->id)->delete();
+        return back();
+    }
+    public function addDealerPage(){
+        return view('pages.add-dealer');
+    }
+    public function addDealerPost(Request $request){
+        $dealer = new Dealer();
+        $dealer->name = $request->name;
+        $dealer->phone = $request->phone;
+        $dealer->email = $request->email;
+        $dealer->address = $request->address;
+        $dealer->password = bcrypt($request->password);
+        $dealer->save();
+        return back();
+    }
+    public function allDealers(){
+        $dealers = Dealer::all();
+        return view('pages.all-dealers')->with([
+            'dealers' => $dealers
+        ]);
+    }
+    public function dropDealer(Request $request){
+       Dealer::find($request->id)->delete();
+        return view('pages.all-dealers');
+    }
+    public function dropProduct(Request $request){
+        Product::find($request->id)->delete();
         return back();
     }
 }

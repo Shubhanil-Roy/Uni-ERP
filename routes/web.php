@@ -37,9 +37,15 @@ Route::prefix('admin')->group(function () {
 Route::post('addproductsStore','Admin\AdminController@addproductsStore')->name('addproductsStore');
 Route::get('addproducts', 'Admin\AdminController@addproducts')->name('addproducts');
 Route::get('allproducts', 'Admin\AdminController@allproducts')->name('allproducts');
-Route::get('dropfactory/{id}', 'Admin\AdminController@dropFactory')->name('dropFactory');
+Route::get('dropProduct{id}', 'Admin\AdminController@dropProduct')->name('dropProduct');
 
 Route::get('addfactory', 'Admin\AdminController@addManufacture')->name('addManufacture');
 Route::get('allfactories', 'Admin\AdminController@allManufacture')->name('allManufacture');
 Route::post('addfactory', 'Admin\AdminController@addManufactureStore')->name('addManufactureStore');
+Route::get('dropfactory/{id}', 'Admin\AdminController@dropFactory')->name('dropFactory');
+
+Route::get('adddealer', 'Admin\AdminController@addDealerPage')->name('addDealerPage');
+Route::post('addDealerPost', 'Admin\AdminController@addDealerPost')->name('addDealerPost');
+Route::get('allDealers', 'Admin\AdminController@allDealers')->name('allDealers');
+Route::get('dropDealer/{id}', 'Admin\AdminController@dropDealer')->name('dropDealer');
 
