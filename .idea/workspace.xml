@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdf3e035-e170-4fd8-b420-49f4c489c33d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/add-dealer.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/all-dealers.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/users/cscs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/users/profile.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/users/profile.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/base.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/base.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/component/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/component/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/add-dealer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/add-dealer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pages/all-products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/all-products.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -167,7 +166,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/pages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../adminpress-20/main/table-data-table.html" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -321,9 +320,14 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="343" y="0" key="CommitChangelistDialog2/0.0.1440.860@0.0.1440.860" timestamp="1579681490924" />
-    <state x="500" y="184" key="FileChooserDialogImpl" timestamp="1579618231139">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1583913700457">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1583913700457" />
+    <state x="474" y="156" key="FileChooserDialogImpl" timestamp="1583934531586">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="474" y="156" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1583934531586" />
     <state x="500" y="184" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1579618231139" />
     <state width="1323" height="162" key="GridCell.Tab.0.bottom" timestamp="1581409487913">
       <screen x="0" y="0" width="1366" height="728" />

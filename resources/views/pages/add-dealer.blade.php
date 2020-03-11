@@ -121,7 +121,6 @@
                                         <div class="col-md-6"></div>
                                     </div>
                                 </div>
-                        </div>
                         </form>
                     </div>
                 </div>

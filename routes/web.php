@@ -49,3 +49,6 @@ Route::post('addDealerPost', 'Admin\AdminController@addDealerPost')->name('addDe
 Route::get('allDealers', 'Admin\AdminController@allDealers')->name('allDealers');
 Route::get('dropDealer/{id}', 'Admin\AdminController@dropDealer')->name('dropDealer');
 
+
+
+
