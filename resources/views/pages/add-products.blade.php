@@ -26,7 +26,7 @@
                             <h4 class="m-b-0 text-white">Add Product</h4>
                         </div>
                         <div class="card-body">
-                            <form action="addproductsStore" class="form-horizontal" method="post"
+                            <form action="{{route('addproductsStore')}}" class="form-horizontal" method="post"
                                   enctype="multipart/form-data">
                                 {{csrf_field()}}
                                 <div class="form-body">
@@ -195,14 +195,14 @@
                                         <div class="col-md-6"></div>
                                     </div>
                                 </div>
+                            </form>
                         </div>
-                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
+
     <!-- ============================================================== -->
     <!-- End Page wrapper  -->
     <!-- ============================================================== -->

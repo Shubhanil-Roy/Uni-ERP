@@ -9,9 +9,10 @@ use App\Model\Product;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
-
+use PDF;
 class AdminController extends Controller
 {
+
     public function __construct()
     {
         $this->middleware('auth:admin',['only' => 'index','edit']);
@@ -121,7 +122,15 @@ class AdminController extends Controller
     }
     public function allproducts(){
         $products = Product::all();
+
         return view('pages.all-products')->with([
+            'products' => $products,
+
+        ]);
+    }
+    public function printproducts(){
+        $products = Product::all();
+        return view('pages.print-all-products')->with([
             'products' => $products
         ]);
     }
@@ -201,6 +210,27 @@ class AdminController extends Controller
     }
     public function dropProduct(Request $request){
         Product::find($request->id)->delete();
-        return back();
+        return redirect()->route('allproducts');
     }
+    public function testproducts(){
+        $products = Product::all();
+        return view('pages.all-test')->with([
+            'products' => $products
+        ]);
+    }
+
+    public function printPDF()
+    {
+        // This  $data array will be passed to our PDF blade
+        $data = [
+            'title' => 'Generate PDF',
+            'heading' => 'Invoices from UNILUXX',
+            'content' => ''
+            ];
+
+        $pdf = PDF::loadView('pages.pdf_view', $data);
+        return $pdf->download('uni-invoice.pdf');
+    }
+
+
 }

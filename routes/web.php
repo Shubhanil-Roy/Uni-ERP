@@ -31,13 +31,17 @@ Route::prefix('admin')->group(function () {
     Route::get('login', 'Admin\LoginController@login')->name('admin.auth.login');
     Route::post('login', 'Admin\LoginController@loginAdmin')->name('admin.auth.loginAdmin');
     Route::post('logout', 'Admin\LoginController@logout')->name('admin.auth.logout');
+    Route::get('logout', 'Admin\LoginController@logout')->name('admin.auth.logout');
 
 });
 
 Route::post('addproductsStore','Admin\AdminController@addproductsStore')->name('addproductsStore');
 Route::get('addproducts', 'Admin\AdminController@addproducts')->name('addproducts');
 Route::get('allproducts', 'Admin\AdminController@allproducts')->name('allproducts');
+Route::get('printproducts', 'Admin\AdminController@printproducts')->name('printproducts');
 Route::get('dropProduct{id}', 'Admin\AdminController@dropProduct')->name('dropProduct');
+
+Route::get('testproducts', 'Admin\AdminController@testproducts')->name('testproducts');
 
 Route::get('addfactory', 'Admin\AdminController@addManufacture')->name('addManufacture');
 Route::get('allfactories', 'Admin\AdminController@allManufacture')->name('allManufacture');
@@ -49,6 +53,12 @@ Route::post('addDealerPost', 'Admin\AdminController@addDealerPost')->name('addDe
 Route::get('allDealers', 'Admin\AdminController@allDealers')->name('allDealers');
 Route::get('dropDealer/{id}', 'Admin\AdminController@dropDealer')->name('dropDealer');
 
+Route::get('/', function () {
 
+    $pdf = PDF::loadView('invoice');
+    return $pdf->download('invoice.pdf');
+    /*return view('welcome');*/
+});
 
-
+Route::get('/customer/print-pdf', [ 'as' => 'customer.printpdf',
+                  'uses' => 'Admin\AdminController@printPDF']);

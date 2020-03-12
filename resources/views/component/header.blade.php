@@ -6,7 +6,7 @@
         <!-- ============================================================== -->
         <!-- Logo -->
         <!-- ============================================================== -->
-        <div class="navbar-header">
+        {{--<div class="navbar-header">
             <a class="navbar-brand" href="index.html">
                 <!-- Logo icon --><b>
                     <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
@@ -21,7 +21,7 @@
                          <img src="assets/images/logo-text.png" alt="homepage" class="dark-logo" />
                     <!-- Light Logo text -->
                          <img src="assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span> </a>
-        </div>
+        </div>--}}
         <!-- ============================================================== -->
         <!-- End Logo -->
         <!-- ============================================================== -->
@@ -298,7 +298,7 @@
                 <h5>Uniluxx Admin</h5>
                 <a href="#" class="dropdown-toggle u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="mdi mdi-settings"></i></a>
                 <a href="app-email.html" class="" data-toggle="tooltip" title="Email"><i class="mdi mdi-gmail"></i></a>
-                <a href="pages-login.html" class="" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a>
+                <a href="{{route('admin.auth.logout')}}" class="" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a>
 
                 <div class="dropdown-menu animated flipInY">
                     <!-- text-->
@@ -335,6 +335,7 @@
                     <ul aria-expanded="false" class="collapse">
                         <li><a href="{{route('addproducts')}}">Add Product</a></li>
                         <li><a href="{{route('allproducts')}}">All Products</a></li>
+                        <li><a href="{{route('printproducts')}}">Print All Products</a></li>
                     </ul>
                 </li>
                 <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-email"></i><span class="hide-menu">Deaaler</span></a>
