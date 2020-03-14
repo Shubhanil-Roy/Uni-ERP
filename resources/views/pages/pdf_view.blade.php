@@ -7,6 +7,11 @@
 <h1>{{ $heading}}</h1>
 <div>
     <p>{{$content}}</p>
+    @foreach($abc as $product)
+    <p>ID: {{$product->id}}</p>
+    <p>Name: {{$product->name}}</p>
+    <p>Identity: {{$product->identity}}</p>
+    @endforeach
 </div>
 </body>
 </html>

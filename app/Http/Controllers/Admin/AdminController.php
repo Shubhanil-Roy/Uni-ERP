@@ -222,10 +222,12 @@ class AdminController extends Controller
     public function printPDF()
     {
         // This  $data array will be passed to our PDF blade
+        $abc = Product::all();
         $data = [
             'title' => 'Generate PDF',
             'heading' => 'Invoices from UNILUXX',
-            'content' => ''
+            'content' => '',
+            'abc' => $abc
             ];
 
         $pdf = PDF::loadView('pages.pdf_view', $data);
