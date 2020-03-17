@@ -44,7 +44,7 @@
                                 @foreach($products as $product)
                                     @if($loop->iteration % 2 == 0)
                                         <div class="pull-left" {{--style="padding-left: 20px"--}}>
-                                            <address>
+                                            <address style="margin-bottom:4rem">
                                                 <h6> &nbsp;<b class="text-danger">Identity : {{$product->identity}}</b></h6>
                                                 <p class="text-muted m-l-5"> Variety : <b class="text-danger"> {{$product->name}}</b>
                                                     <br/> Dimension : {{$product->length.' inch'}} X {{$product->width.' inch'}}
@@ -71,7 +71,7 @@
                                         </div>
                                     @else
                                         <div class=" pull-right" style="padding-right: 75px" >
-                                            <address>
+                                            <address style="margin-bottom:4rem">
                                                 <h6> &nbsp;<b class="text-danger">Identity : {{$product->identity}}</b></h6>
                                                 <p class="text-muted m-l-5"> Variety : <b class="text-danger"> {{$product->name}}</b>
                                                     <br/> Dimension : {{$product->length.' inch'}} X {{$product->width.' inch'}}
@@ -100,27 +100,36 @@
                                 @endforeach
                             </div>
 
-                            <div class="col-lg-12">
-                                <div class="clearfix"></div>
-                                <hr>
-                                <div class="text-right">
-                                    <a href="{{route('customer.printpdf')}}">Print PDF</a>
-                                    {{--<button class="btn btn-danger" type="submit"> Proceed to payment </button>--}}
-                                    <button id="print" class="btn btn-danger" type="button"> <span><i class="fa fa-print"></i> Print</span> </button>
-                                </div>
-                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="clearfix"></div>
+                        <hr>
+                        <div class="text-right">
+                            <a href="{{route('customer.printpdf')}}">Print PDF</a>
+                            {{--<button class="btn btn-danger" type="submit"> Proceed to payment </button>--}}
+                            <button id="print" class="btn btn-danger" type="button"> <span><i class="fa fa-print"></i> Print</span> </button>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- ============================================================== -->
             <!-- End PAge Content -->
+
+            <div>
+
+            </div>
             <!-- ============================================================== -->
             <!-- ============================================================== -->
             <!-- Right sidebar -->
             <!-- ============================================================== -->
             <!-- ============================================================== -->
         </div>
+
+       <div>
+
+       </div>
+
         <!-- ============================================================== -->
         <!-- End Container fluid  -->
         <!-- ============================================================== -->

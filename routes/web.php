@@ -39,6 +39,7 @@ Route::post('addproductsStore','Admin\AdminController@addproductsStore')->name('
 Route::get('addproducts', 'Admin\AdminController@addproducts')->name('addproducts');
 Route::get('allproducts', 'Admin\AdminController@allproducts')->name('allproducts');
 Route::get('printproducts', 'Admin\AdminController@printproducts')->name('printproducts');
+Route::get('print', 'Admin\AdminController@print')->name('print');
 Route::get('dropProduct{id}', 'Admin\AdminController@dropProduct')->name('dropProduct');
 
 Route::get('testproducts', 'Admin\AdminController@testproducts')->name('testproducts');
@@ -53,7 +54,7 @@ Route::post('addDealerPost', 'Admin\AdminController@addDealerPost')->name('addDe
 Route::get('allDealers', 'Admin\AdminController@allDealers')->name('allDealers');
 Route::get('dropDealer/{id}', 'Admin\AdminController@dropDealer')->name('dropDealer');
 
-Route::get('/', function () {
+Route::get('/index', function () {
 
     $pdf = PDF::loadView('invoice');
     return $pdf->download('invoice.pdf');
