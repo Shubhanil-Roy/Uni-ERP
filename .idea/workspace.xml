@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdf3e035-e170-4fd8-b420-49f4c489c33d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/uni-invoice (1).pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uni-invoice (2).pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uni-invoice.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/print-products.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uniluxx-logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Uniluxx Dealer App Admin Panel.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/pdf_view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/pdf_view.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/jquery.PrintArea.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/jquery.PrintArea.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pages/print-all-products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/print-all-products.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,6 +229,9 @@
       <workItem from="1584073964303" duration="3890000" />
       <workItem from="1584183192596" duration="1934000" />
       <workItem from="1584345614822" duration="8855000" />
+      <workItem from="1584440051460" duration="131000" />
+      <workItem from="1584449363244" duration="2063000" />
+      <workItem from="1584451859756" duration="3533000" />
     </task>
     <task id="LOCAL-00001" summary="coommit">
       <created>1579617948919</created>
@@ -320,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584024363751</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Print Layout">
+      <created>1584440119086</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1584440119086</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,10 +349,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="450" y="186" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.860@0.0.1440.860" timestamp="1579623582761" />
-    <state x="325" y="0" key="CommitChangelistDialog2" timestamp="1584024361409">
+    <state x="325" y="0" key="CommitChangelistDialog2" timestamp="1584440094241">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="325" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1584024361409" />
+    <state x="325" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1584440094241" />
     <state x="343" y="0" key="CommitChangelistDialog2/0.0.1440.860@0.0.1440.860" timestamp="1579681490924" />
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1583913700457">
       <screen x="0" y="0" width="1366" height="728" />
@@ -406,15 +410,15 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="567" y="338" key="VCS.ChangelistChooser/0.0.1440.860@0.0.1440.860" timestamp="1579617973506" />
-    <state x="296" y="134" key="Vcs.Push.Dialog.v2" timestamp="1584024401121">
+    <state x="296" y="134" key="Vcs.Push.Dialog.v2" timestamp="1584440124258">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="296" y="134" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1584024401121" />
+    <state x="296" y="134" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1584440124258" />
     <state x="312" y="158" key="Vcs.Push.Dialog.v2/0.0.1440.860@0.0.1440.860" timestamp="1579681397414" />
-    <state x="359" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1584440055943">
+    <state x="359" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1584451857063">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="359" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584440055943" />
+    <state x="359" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584451857063" />
     <state x="507" y="46" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1579612889762">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
