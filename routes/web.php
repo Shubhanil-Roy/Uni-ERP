@@ -50,6 +50,7 @@ Route::post('addfactory', 'Admin\AdminController@addManufactureStore')->name('ad
 Route::get('dropfactory/{id}', 'Admin\AdminController@dropFactory')->name('dropFactory');
 
 Route::get('adddealer', 'Admin\AdminController@addDealerPage')->name('addDealerPage');
+
 Route::post('addDealerPost', 'Admin\AdminController@addDealerPost')->name('addDealerPost');
 Route::get('allDealers', 'Admin\AdminController@allDealers')->name('allDealers');
 Route::get('dropDealer/{id}', 'Admin\AdminController@dropDealer')->name('dropDealer');
@@ -63,3 +64,8 @@ Route::get('/index', function () {
 
 Route::get('/customer/print-pdf', [ 'as' => 'customer.printpdf',
                   'uses' => 'Admin\AdminController@printPDF']);
+
+Route::get('printlayout', 'Admin\AdminController@printlayout')->name('printlayout');
+
+Route::get('pdfview',array('as'=>'pdfview','uses'=>'Admin\AdminController@pdfview'));
+

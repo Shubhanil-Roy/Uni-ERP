@@ -240,5 +240,27 @@ class AdminController extends Controller
         return $pdf->download('uni-invoice.pdf');
     }
 
+    public function printlayout(){
+        $product = Product::all();
+        return view('pages.final-print')->with([
+            'products' => $product
+        ]);
+    }
+
+    public function pdfview(Request $request)
+    {
+        $product = Product::all();
+        return view('pages.pdf_view')->with([
+            'abc'=> $product
+        ]);
+
+
+        if($request->has('download')){
+            $pdf = PDF::loadView('pages.pdf_view');
+            return $pdf->download('pdfview.pdf');
+        }
+
+        return view('pages.pdf_view');
+    }
 
 }
