@@ -7,34 +7,39 @@
         }
 
         table {
-            border-collapse: collapse;
+            /*border-collapse: collapse;*/
             width: 100%;
+        }
+
+        #right {
+            float: left;
+        }
+
+        #left {
+            float: right;
         }
 
         th {
             height: 50px;
         }
     </style>
+
 </head>
 <body>
 
-<p>Uniluxx Invoice</p>
 
 <div class="row">
     <div class="col-lg-12">
         <div class="card card-body printableArea" style="position: initial">
             <div class="container">
-                <table>
-
-                    <tr>
-                        <th>UNILUXX</th>
-                        <th>UNILUXX</th>
-                    </tr>
-                    <tr>
-                        @foreach($products as $product)
-                            @if($loop->iteration % 2 == 1)
+                @foreach($products as $product)
+                    @if($loop->iteration % 2 == 1)
+                        <div>
+                            <div id="right" {{--class="pull-right"--}} style="margin-bottom: 2rem;width: 50%">
                                 <td>
                                     <table>
+                                        <th colspan="4">UNILUXX</th>
+
                                         <tr>
                                             <td>Identity</td>
                                             <td><b>{{$product->identity}}</b></td>
@@ -46,8 +51,8 @@
                                         <tr>
                                             <td>Dimension</td>
                                             <td>
-                                                {{$product->length.' inch'}}
-                                                X {{$product->width.' inch'}}
+                                                {{$product->length*2.54.' cm'}}
+                                                X {{$product->width*2.54.' cm'}} X {{$product->height*2.54.' cm'}}
                                             </td>
                                         </tr>
                                         <tr>
@@ -59,180 +64,170 @@
 
                                         </tr>
                                         <tr>
-                                            <td>
-                                                Product Quantity
-                                            </td>
-                                            <td>
-                                                1 No
-                                            </td>
+                                            <table>
+                                                <tr>
+                                                    <td>Product Quantity</td>
+                                                    <td>1 NO</td>
+                                                    <td rowspan="4"><img
+                                                            style="height: 100px; width: 100px"
+                                                            src="data:image/svg+xml;base64,{{$product->qr_code}}"
+                                                            alt="QR Code"/></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>SL NO</td>
+                                                    <td>{{$product->sl_no}}</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td style="text-align:justify">MFG. Date :</td>
+                                                    <td>{{$product->manufacturing_date}}</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>M.R.P. (Incl. of all taxs) :</td>
+                                                    <td>{{$product->price}}</td>
+                                                </tr>
+                                            </table>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                S.L. No :
-                                            </td>
-                                            <td>
-                                                {{$product->sl_no}}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Date of
-                                                MFG. :
-                                            </td>
-                                            <td>
-                                                {{$product->manufacturing_date}}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                M.R.P
-                                                (Incl.
-                                                of
-                                                all taxs) :
-                                            </td>
-                                            <td>
-                                                {{$product->price}}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img
-                                                    style="height: 70px; width: 80px"
-                                                    src="{{asset('ok.jpg')}}"
-                                                    alt="Quality Checked"/>
-                                            </td>
-                                            <td>
-                                                <h6 style="font-size: 14px;text-align: center;margin-top: 25px">
-                                                    A Product From:<br> JK FOAM </h6>
-                                                <h6 style="font-size: 9px;text-align: center;">
-                                                    AN ISO 9001:2008 Company</h6>
-                                                <h6 style="font-size: 13px">Website : www.uniluxx.com |
-                                                    www.jkfoam.com</h6>
-                                                <h6 style="font-size: 13px">Mail : info@uniluxx.com |
-                                                    jkfoam.slg@gmail.com</h6>
-                                                <h6 style="font-size: 13px">Customer Care : +91 99321 38888
-                                                    |
-                                                    +91
-                                                    99322 75000</h6>
-                                            </td>
-                                            <td>
-                                                <img
-                                                    style="height: 100px; width: 100px"
-                                                    src="data:image/svg+xml;base64,{{$product->qr_code}}"
-                                                    alt="QR Code"/>
-                                            </td>
+                                            <table>
+                                                <tr>
+                                                    <td rowspan="4">
+                                                        <img style="height: 70px; width: 80px" src="{{asset('ok.jpg')}}"
+                                                             alt="Quality Checked"/>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align:center">A Product From: JK FOAM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align:center">Website: www.uniluxx.com |
+                                                        www.jkfoam.com
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align:center">Mail: info@uniluxx.com |
+                                                        jkfoam.slg@gmail.com
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <table>
+                                                        <td style="text-align:center">Customer Care : +91 99321 38888 |
+                                                            +91
+                                                            99322 75000
+                                                        </td>
+                                                    </table>
+                                                </tr>
+                                            </table>
                                         </tr>
                                     </table>
                                 </td>
+                            </div>
                             @else
-                                <td>
-                                    <table>
-                                        <tr>
-                                            <td>Identity</td>
-                                            <td><b>{{$product->identity}}</b></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Variety</td>
-                                            <td><b>{{$product->name}}</b></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Dimension</td>
-                                            <td>
-                                                {{$product->length.' inch'}}
-                                                X {{$product->width.' inch'}}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Product Code</td>
-                                            <td>
-                                                {{$product->length}} X {{$product->width}}
-                                                X {{$product->height}}
-                                            </td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Product Quantity
-                                            </td>
-                                            <td>
-                                                1 No
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                S.L. No :
-                                            </td>
-                                            <td>
-                                                {{$product->sl_no}}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Date of
-                                                MFG. :
-                                            </td>
-                                            <td>
-                                                {{$product->manufacturing_date}}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                M.R.P
-                                                (Incl.
-                                                of
-                                                all taxs) :
-                                            </td>
-                                            <td>
-                                                {{$product->price}}
-                                            </td>
-                                        </tr>
+                                <div id="left" {{--class="pull-right"--}} style="margin-bottom: 2rem;width: 50%">
+                                    <td>
                                         <table>
+                                            <th colspan="4">UNILUXX</th>
+
                                             <tr>
+                                                <td>Identity</td>
+                                                <td><b>{{$product->identity}}</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Variety</td>
+                                                <td><b>{{$product->name}}</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Dimension</td>
                                                 <td>
-                                                    <img
-                                                        style="height: 70px; width: 80px"
-                                                        src="{{asset('ok.jpg')}}"
-                                                        alt="Quality Checked"/>
-                                                </td>
-                                                <td>
-                                                    <h6 style="font-size: 14px;text-align: center;margin-top: 25px">
-                                                        A Product From:<br> JK FOAM </h6>
-                                                    <h6 style="font-size: 9px;text-align: center;">
-                                                        AN ISO 9001:2008 Company</h6>
-                                                    <h6 style="font-size: 13px">Website : www.uniluxx.com |
-                                                        www.jkfoam.com</h6>
-                                                    <h6 style="font-size: 13px">Mail : info@uniluxx.com |
-                                                        jkfoam.slg@gmail.com</h6>
-                                                    <h6 style="font-size: 13px">Customer Care : +91 99321 38888
-                                                        |
-                                                        +91
-                                                        99322 75000</h6>
-                                                <td>
-                                                    <img
-                                                        style="height: 100px; width: 100px"
-                                                        src="data:image/svg+xml;base64,{{$product->qr_code}}"
-                                                        alt="QR Code"/>
+                                                    {{$product->length*2.54.' cm'}}
+                                                    X {{$product->width*2.54.' cm'}} X {{$product->height*2.54.' cm'}}
                                                 </td>
                                             </tr>
+                                            <tr>
+                                                <td>Product Code</td>
+                                                <td>
+                                                    {{$product->length}} X {{$product->width}}
+                                                    X {{$product->height}}
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <table>
+                                                    <tr>
+                                                        <td>Product Quantity</td>
+                                                        <td>1 NO</td>
+                                                        <td rowspan="4"><img
+                                                                style="height: 100px; width: 100px"
+                                                                src="data:image/svg+xml;base64,{{$product->qr_code}}"
+                                                                alt="QR Code"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>SL NO</td>
+                                                        <td>{{$product->sl_no}}</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td style="text-align:justify">MFG. Date :</td>
+                                                        <td>{{$product->manufacturing_date}}</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>M.R.P. (Incl. of all taxs) :</td>
+                                                        <td>{{$product->price}}</td>
+                                                    </tr>
+                                                </table>
+                                            </tr>
+                                            <tr>
+                                                <table>
+                                                    <tr>
+                                                        <td rowspan="4">
+                                                            <img style="height: 70px; width: 80px" src="{{asset('ok.jpg')}}"
+                                                                 alt="Quality Checked"/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="text-align:center">A Product From: JK FOAM</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="text-align:center">Website: www.uniluxx.com |
+                                                            www.jkfoam.com
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="text-align:center">Mail: info@uniluxx.com |
+                                                            jkfoam.slg@gmail.com
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <table>
+                                                            <td style="text-align:center">Customer Care : +91 99321 38888 |
+                                                                +91
+                                                                99322 75000
+                                                            </td>
+                                                        </table>
+                                                    </tr>
+                                                </table>
+                                            </tr>
                                         </table>
-                                    </table>
-                                </td>
-                            @endif
-                        @endforeach
-                    </tr>
-                </table>
+                                    </td>
+                                </div>
+                        </div>
+                    @endif
+                @endforeach
             </div>
         </div>
-        <div class="col-lg-12">
-            <div class="clearfix"></div>
-            <hr>
-            <div class="text-right">
-                <a href="{{route('customer.printpdf')}}">Print PDF</a>
-                <button id="print" class="btn btn-danger" type="button"><span><i class="fa fa-print"></i> Print</span>
-                </button>
-            </div>
-        </div>
+
     </div>
+    {{--<div class="col-lg-12">
+        <div class="clearfix"></div>
+        <hr>
+        <div class="text-right">
+            --}}{{--<a href="{{route('customer.printpdf')}}">Print PDF</a>--}}{{--
+            <button id="print" class="btn btn-danger" type="button"><span><i class="fa fa-print"></i> Print</span>
+            </button>
+        </div>
+    </div>--}}
 </div>
 
 
@@ -276,8 +271,8 @@
 
 <script src="{{asset('js/jquery.PrintArea.js')}}" type="text/JavaScript"></script>
 <script>
-    $(document).ready(function() {
-        $("#print").click(function() {
+    $(document).ready(function () {
+        $("#print").click(function () {
             var mode = 'iframe'; //popup
             var close = mode == "popup";
             var options = {

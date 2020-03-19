@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdf3e035-e170-4fd8-b420-49f4c489c33d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/final-print.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/component/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/final-print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/final-print.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pages/pdf_view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/pdf_view.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/print-all-products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/print-all-products.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/print-products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/print-products.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +163,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../adminpress-20/main/pages-invoice.html" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../uniluxx-new-solved/app/Http/Controllers/ManageController.php" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -239,7 +236,9 @@
       <workItem from="1584507903391" duration="4037000" />
       <workItem from="1584512341850" duration="2748000" />
       <workItem from="1584515355206" duration="974000" />
-      <workItem from="1584517829768" duration="19999000" />
+      <workItem from="1584517829768" duration="20067000" />
+      <workItem from="1584593432665" duration="14539000" />
+      <workItem from="1584611238151" duration="1258000" />
     </task>
     <task id="LOCAL-00001" summary="coommit">
       <created>1579617948919</created>
@@ -339,7 +338,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584455489219</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Print Layout">
+      <created>1584541274581</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1584541274581</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -364,19 +370,19 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="450" y="186" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.860@0.0.1440.860" timestamp="1579623582761" />
-    <state x="325" y="0" key="CommitChangelistDialog2" timestamp="1584455482672">
+    <state x="325" y="0" key="CommitChangelistDialog2" timestamp="1584541271346">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="325" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1584455482672" />
+    <state x="325" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1584541271346" />
     <state x="343" y="0" key="CommitChangelistDialog2/0.0.1440.860@0.0.1440.860" timestamp="1579681490924" />
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1583913700457">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1583913700457" />
-    <state x="474" y="156" key="FileChooserDialogImpl" timestamp="1584516325846">
+    <state x="474" y="156" key="FileChooserDialogImpl" timestamp="1584610610601">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="474" y="156" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584516325846" />
+    <state x="474" y="156" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584610610601" />
     <state x="500" y="184" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1579618231139" />
     <state width="1323" height="162" key="GridCell.Tab.0.bottom" timestamp="1581409487913">
       <screen x="0" y="0" width="1366" height="728" />
@@ -425,15 +431,15 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="567" y="338" key="VCS.ChangelistChooser/0.0.1440.860@0.0.1440.860" timestamp="1579617973506" />
-    <state x="296" y="134" key="Vcs.Push.Dialog.v2" timestamp="1584455514172">
+    <state x="296" y="134" key="Vcs.Push.Dialog.v2" timestamp="1584541286284">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="296" y="134" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1584455514172" />
+    <state x="296" y="134" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1584541286284" />
     <state x="312" y="158" key="Vcs.Push.Dialog.v2/0.0.1440.860@0.0.1440.860" timestamp="1579681397414" />
-    <state x="359" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1584517828580">
+    <state x="359" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1584593435391">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="359" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584517828580" />
+    <state x="359" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584593435391" />
     <state x="507" y="46" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1579612889762">
       <screen x="0" y="0" width="1440" height="860" />
     </state>

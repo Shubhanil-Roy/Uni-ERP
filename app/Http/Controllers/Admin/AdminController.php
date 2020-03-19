@@ -134,12 +134,12 @@ class AdminController extends Controller
             'products' => $products
         ]);
     }
-    public function print(){
+    /*public function print(){
         $print = Product::all();
         return view('pages.print-products')->with([
             'prints' => $print
         ]);
-    }
+    }*/
     public function addproductsStore(Request $request){
         $factory = ManufacturePlace::find($request->manufacturing_place_id);
         $addproductsStore = new Product();
@@ -242,12 +242,13 @@ class AdminController extends Controller
 
     public function printlayout(){
         $product = Product::all();
+
         return view('pages.final-print')->with([
             'products' => $product
         ]);
     }
 
-    public function pdfview(Request $request)
+    /*public function pdfview(Request $request)
     {
         $product = Product::all();
         return view('pages.pdf_view')->with([
@@ -261,6 +262,6 @@ class AdminController extends Controller
         }
 
         return view('pages.pdf_view');
-    }
+    }*/
 
 }
