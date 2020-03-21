@@ -304,7 +304,7 @@
                     <!-- text-->
                     <a href="#" class="dropdown-item"><i class="ti-user"></i> My Profile</a>
                     <!-- text-->
-                    <a href="#" class="dropdown-item"><i class="ti-wallet"></i> My Balance</a>
+                    {{--<a href="#" class="dropdown-item"><i class="ti-wallet"></i> My Balance</a>
                     <!-- text-->
                     <a href="#" class="dropdown-item"><i class="ti-email"></i> Inbox</a>
                     <!-- text-->
@@ -312,9 +312,9 @@
                     <!-- text-->
                     <a href="#" class="dropdown-item"><i class="ti-settings"></i> Account Setting</a>
                     <!-- text-->
-                    <div class="dropdown-divider"></div>
+                    <div class="dropdown-divider"></div>--}}
                     <!-- text-->
-                    <a href="login.html" class="dropdown-item"><i class="fa fa-power-off"></i> Logout</a>
+                    <a href="{{route('admin.auth.logout')}}" class="dropdown-item"><i class="fa fa-power-off"></i> Logout</a>
                     <!-- text-->
                 </div>
             </div>
@@ -334,9 +334,9 @@
                 <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Products</span></a>
                     <ul aria-expanded="false" class="collapse">
                         <li><a href="{{route('addproducts')}}">Add Product</a></li>
-                        <li><a href="{{route('allproducts')}}">All Products</a></li>
+                        <li><a  href="{{route('allproducts')}}">All Products</a></li>
                         {{--<li><a href="{{route('printproducts')}}">Print All Products</a></li>--}}
-                        <li><a href="{{route('printlayout')}}">Print Products</a></li>
+                        <li><a target="_blank" href="{{route('printlayout')}}">Print Products</a></li>
                     </ul>
                 </li>
                 <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-email"></i><span class="hide-menu">Deaaler</span></a>

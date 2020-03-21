@@ -22,10 +22,10 @@
 
                 <!-- Collapsed Hamburger -->
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                    {{--<span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>--}}
+{{--                    <span class="sr-only">Toggle Navigation</span>--}}
+{{--                    <span class="icon-bar"></span>--}}
+{{--                    <span class="icon-bar"></span>--}}
+{{--                    <span class="icon-bar"></span>--}}
                 </button>
                 {{--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">

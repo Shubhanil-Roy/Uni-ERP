@@ -35,10 +35,13 @@
                 @foreach($products as $product)
                     @if($loop->iteration % 2 == 1)
                         <div>
-                            <div id="right" {{--class="pull-right"--}} style="margin-bottom: 2rem;width: 50%">
+                            <div id="right" {{--class="pull-right"--}} style="margin-bottom: 7rem;width: 50%">
                                 <td>
                                     <table>
-                                        <th colspan="4">UNILUXX</th>
+                                        <th colspan="4">
+                                            <img style="height: 50px /*padding-left: 25%*/" src="{{asset('abc.jpeg')}}"
+                                                             alt="UNILUXX">
+                                        </th>
 
                                         <tr>
                                             <td>Identity</td>
@@ -112,7 +115,7 @@
                                                 </tr>
                                                 <tr>
                                                     <table>
-                                                        <td style="text-align:center">Customer Care : +91 99321 38888 |
+                                                        <td style="text-align:center">Customer Care : +91 99321 38888 |<br>
                                                             +91
                                                             99322 75000
                                                         </td>
@@ -124,10 +127,13 @@
                                 </td>
                             </div>
                             @else
-                                <div id="left" {{--class="pull-right"--}} style="margin-bottom: 2rem;width: 50%">
+                                <div id="left" {{--class="pull-right"--}} style="margin-bottom: 7rem;width: 50%">
                                     <td>
                                         <table>
-                                            <th colspan="4">UNILUXX</th>
+                                            <th colspan="4">
+                                                <img style="height: 50px /*padding-left: 25%*/" src="{{asset('abc.jpeg')}}"
+                                                     alt="UNILUXX">
+                                            </th>
 
                                             <tr>
                                                 <td>Identity</td>
@@ -201,9 +207,8 @@
                                                     </tr>
                                                     <tr>
                                                         <table>
-                                                            <td style="text-align:center">Customer Care : +91 99321 38888 |
-                                                                +91
-                                                                99322 75000
+                                                            <td style="text-align:center">Customer Care : +91 99321 38888 |<br>
+                                                               +91 99322 75000
                                                             </td>
                                                         </table>
                                                     </tr>
@@ -217,7 +222,6 @@
                 @endforeach
             </div>
         </div>
-
     </div>
     {{--<div class="col-lg-12">
         <div class="clearfix"></div>

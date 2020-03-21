@@ -232,7 +232,7 @@ class AdminController extends Controller
         $data = [
             'title' => 'Generate PDF',
             'heading' => 'Invoices from UNILUXX',
-            'content' => '',
+            'content' => 'Product',
             'abc' => $abc
             ];
 
@@ -248,7 +248,7 @@ class AdminController extends Controller
         ]);
     }
 
-    /*public function pdfview(Request $request)
+    public function pdfview(Request $request)
     {
         $product = Product::all();
         return view('pages.pdf_view')->with([
@@ -262,6 +262,6 @@ class AdminController extends Controller
         }
 
         return view('pages.pdf_view');
-    }*/
+    }
 
 }
