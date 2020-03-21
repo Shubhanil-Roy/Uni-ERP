@@ -3,7 +3,7 @@
 <head>
     <style>
         table, th {
-            border: 1px solid black;
+            border: 0.5px solid black;
         }
 
         table {
@@ -35,21 +35,21 @@
                 @foreach($products as $product)
                     @if($loop->iteration % 2 == 1)
                         <div>
-                            <div id="right" {{--class="pull-right"--}} style="margin-bottom: 7rem;width: 50%">
-                                <td>
+                            <div id="right" {{--class="pull-right"--}} style="margin-bottom: 7rem;width: 49%">
+                                <table>
                                     <table>
-                                        <th colspan="4">
+                                        <th colspan="4" style="width: 94%">
                                             <img style="height: 50px /*padding-left: 25%*/" src="{{asset('abc.jpeg')}}"
-                                                             alt="UNILUXX">
+                                                 alt="UNILUXX">
                                         </th>
 
                                         <tr>
                                             <td>Identity</td>
-                                            <td><b>{{$product->identity}}</b></td>
+                                            <td>{{$product->identity}}</td>
                                         </tr>
                                         <tr>
                                             <td>Variety</td>
-                                            <td><b>{{$product->name}}</b></td>
+                                            <td>{{$product->name}}</td>
                                         </tr>
                                         <tr>
                                             <td>Dimension</td>
@@ -115,7 +115,8 @@
                                                 </tr>
                                                 <tr>
                                                     <table>
-                                                        <td style="text-align:center">Customer Care : +91 99321 38888 |<br>
+                                                        <td style="text-align:center">Customer Care : +91 99321 38888
+                                                            |<br>
                                                             +91
                                                             99322 75000
                                                         </td>
@@ -124,14 +125,15 @@
                                             </table>
                                         </tr>
                                     </table>
-                                </td>
+                                </table>
                             </div>
                             @else
-                                <div id="left" {{--class="pull-right"--}} style="margin-bottom: 7rem;width: 50%">
-                                    <td>
+                                <div id="left" {{--class="pull-right"--}} style="margin-bottom: 7rem;width: 49%">
+                                    <table>
                                         <table>
-                                            <th colspan="4">
-                                                <img style="height: 50px /*padding-left: 25%*/" src="{{asset('abc.jpeg')}}"
+                                            <th colspan="4" style="width: 94%">
+                                                <img style="height: 50px /*padding-left: 25%*/"
+                                                     src="{{asset('abc.jpeg')}}"
                                                      alt="UNILUXX">
                                             </th>
 
@@ -188,7 +190,8 @@
                                                 <table>
                                                     <tr>
                                                         <td rowspan="4">
-                                                            <img style="height: 70px; width: 80px" src="{{asset('ok.jpg')}}"
+                                                            <img style="height: 70px; width: 80px"
+                                                                 src="{{asset('ok.jpg')}}"
                                                                  alt="Quality Checked"/>
                                                         </td>
                                                     </tr>
@@ -207,15 +210,16 @@
                                                     </tr>
                                                     <tr>
                                                         <table>
-                                                            <td style="text-align:center">Customer Care : +91 99321 38888 |<br>
-                                                               +91 99322 75000
+                                                            <td style="text-align:center">Customer Care : +91 99321
+                                                                38888 |<br>
+                                                                +91 99322 75000
                                                             </td>
                                                         </table>
                                                     </tr>
                                                 </table>
                                             </tr>
                                         </table>
-                                    </td>
+                                    </table>
                                 </div>
                         </div>
                     @endif
