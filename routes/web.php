@@ -41,6 +41,8 @@ Route::get('printlayout', 'Admin\AdminController@printlayout')->name('printlayou
 Route::get('dropProduct{id}', 'Admin\AdminController@dropProduct')->name('dropProduct')->middleware('auth:admin');
 
 Route::get('testproducts', 'Admin\AdminController@testproducts')->name('testproducts')->middleware('auth:admin');
+Route::get('datewiseProductPrint', 'Admin\AdminController@datewiseProductPrint')->name('datewiseProductPrint');/*->middleware('auth:admin');*/
+Route::post('dateWisePrintPost', 'Admin\AdminController@dateWisePrintPost')->name('dateWisePrintPost');/*->middleware('auth:admin');*/
 
 Route::get('addfactory', 'Admin\AdminController@addManufacture')->name('addManufacture')->middleware('auth:admin');
 Route::get('allfactories', 'Admin\AdminController@allManufacture')->name('allManufacture')->middleware('auth:admin');

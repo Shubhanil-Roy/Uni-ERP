@@ -336,6 +336,7 @@
                         <li><a href="{{route('addproducts')}}">Add Product</a></li>
                         <li><a  href="{{route('allproducts')}}">All Products</a></li>
                         {{--<li><a href="{{route('printproducts')}}">Print All Products</a></li>--}}
+                        <li><a href="{{route('datewiseProductPrint')}}"> Date Wise Product Print </a></li>
                         <li><a target="_blank" href="{{route('printlayout')}}">Print Products</a></li>
                     </ul>
                 </li>

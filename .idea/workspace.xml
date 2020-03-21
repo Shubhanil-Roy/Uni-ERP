@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdf3e035-e170-4fd8-b420-49f4c489c33d" name="Default Changelist" comment="Print Layout Complete">
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/dateWisePrint.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/datewiseProductPrint.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/final-print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/final-print.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/base.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/base.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/component/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/component/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/all-manufacture.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/all-manufacture.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/all-products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/all-products.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/all-test.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/all-test.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +168,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../victoria-junction" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../gb7-invoice" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -237,7 +245,9 @@
       <workItem from="1584593432665" duration="14539000" />
       <workItem from="1584611238151" duration="10982000" />
       <workItem from="1584764933392" duration="97000" />
-      <workItem from="1584765043535" duration="6071000" />
+      <workItem from="1584765043535" duration="6360000" />
+      <workItem from="1584772105938" duration="6948000" />
+      <workItem from="1584784964325" duration="11684000" />
     </task>
     <task id="LOCAL-00001" summary="coommit">
       <created>1579617948919</created>
@@ -358,7 +368,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584767268212</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Print Layout Complete">
+      <created>1584771511603</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1584771511603</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,23 +397,24 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="174" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.860@0.0.1440.860" timestamp="1579608689589" />
-    <state x="450" y="186" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1579623582761">
-      <screen x="0" y="0" width="1440" height="860" />
-    </state>
-    <state x="450" y="186" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.860@0.0.1440.860" timestamp="1579623582761" />
-    <state x="325" y="0" key="CommitChangelistDialog2" timestamp="1584767520898">
+    <state x="427" y="157" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1584789953595">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="325" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1584767520898" />
+    <state x="427" y="157" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1584789953595" />
+    <state x="450" y="186" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.860@0.0.1440.860" timestamp="1579623582761" />
+    <state x="325" y="0" key="CommitChangelistDialog2" timestamp="1584771536817">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="325" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1584771536817" />
     <state x="343" y="0" key="CommitChangelistDialog2/0.0.1440.860@0.0.1440.860" timestamp="1579681490924" />
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1583913700457">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1583913700457" />
-    <state x="474" y="156" key="FileChooserDialogImpl" timestamp="1584768745340">
+    <state x="474" y="156" key="FileChooserDialogImpl" timestamp="1584794396421">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="474" y="156" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584768745340" />
+    <state x="474" y="156" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584794396421" />
     <state x="500" y="184" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1579618231139" />
     <state width="1323" height="162" key="GridCell.Tab.0.bottom" timestamp="1581409487913">
       <screen x="0" y="0" width="1366" height="728" />
@@ -432,10 +450,10 @@
     </state>
     <state x="402" y="115" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1584183267789" />
     <state x="424" y="136" key="MultipleFileMergeDialog/0.0.1440.860@0.0.1440.860" timestamp="1579618161979" />
-    <state x="652" y="375" key="NewPhpFileDialog" timestamp="1584347643442">
+    <state x="652" y="375" key="NewPhpFileDialog" timestamp="1584794686812">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="652" y="375" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1584347643442" />
+    <state x="652" y="375" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1584794686812" />
     <state x="687" y="443" key="NewPhpFileDialog/0.0.1440.860@0.0.1440.860" timestamp="1579622241533" />
     <state x="507" y="63" key="VCS.ChangeListViewerDialog" timestamp="1579617975986">
       <screen x="0" y="0" width="1440" height="860" />
@@ -445,15 +463,15 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="567" y="338" key="VCS.ChangelistChooser/0.0.1440.860@0.0.1440.860" timestamp="1579617973506" />
-    <state x="296" y="134" key="Vcs.Push.Dialog.v2" timestamp="1584767532515">
+    <state x="296" y="134" key="Vcs.Push.Dialog.v2" timestamp="1584771545029">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="296" y="134" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1584767532515" />
+    <state x="296" y="134" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1584771545029" />
     <state x="312" y="158" key="Vcs.Push.Dialog.v2/0.0.1440.860@0.0.1440.860" timestamp="1579681397414" />
-    <state x="359" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1584593435391">
+    <state x="359" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1584772139023">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="359" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584593435391" />
+    <state x="359" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584772139023" />
     <state x="507" y="46" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1579612889762">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
@@ -471,9 +489,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="414" y="137" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1584346094272" />
-    <state x="383" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1579675969751">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state x="363" y="152" width="670" height="574" key="search.everywhere.popup" timestamp="1584789049960">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="363" y="152" width="670" height="574" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1584789049960" />
     <state x="383" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1440.860@0.0.1440.860" timestamp="1579675969751" />
   </component>
 </project>

@@ -83,6 +83,10 @@
 <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
 <!-- end - This is for export functionality only -->
 <script src="{{asset('js/jquery.PrintArea.js')}}" type="text/JavaScript"></script>
+
+
+
+
 <script>
     $(document).ready(function() {
         $("#print").click(function() {

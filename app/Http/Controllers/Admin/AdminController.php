@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use PDF;
+use Carbon\Carbon;
 class AdminController extends Controller
 {
 
@@ -218,12 +219,7 @@ class AdminController extends Controller
         Product::find($request->id)->delete();
         return redirect()->route('allproducts');
     }
-    public function testproducts(){
-        $products = Product::all();
-        return view('pages.all-test')->with([
-            'products' => $products
-        ]);
-    }
+
 
     public function printPDF()
     {
@@ -242,11 +238,29 @@ class AdminController extends Controller
 
     public function printlayout(){
         $product = Product::all();
-
         return view('pages.final-print')->with([
             'products' => $product
         ]);
     }
+    public function datewiseProductPrint(){
+        return view('pages.datewiseProductPrint');
+    }
+
+    public function dateWisePrintPost(Request $request){
+        $start_date = new Carbon($request->start_date);
+        $end_date = new Carbon($request->end_date);
+        $start_date = $start_date->format('Y-m-d')." 00:00:00";
+        $end_date = $end_date->format('Y-m-d')." 00:00:00";
+        $products = Product::whereBetween('created_at', [$start_date, $end_date])->get();
+
+        return view('pages.dateWisePrint')->with([
+            'products' => $products,
+            'type' => 'dated',
+            'start_date_request' => $request->start_date,
+            'end_date_request' => $request->end_date
+        ]);
+    }
+
 
     public function pdfview(Request $request)
     {
@@ -262,6 +276,13 @@ class AdminController extends Controller
         }
 
         return view('pages.pdf_view');
+    }
+    public function testproducts(Request $request){
+/*        $products = Product::where('manufacturing_date',$request->manufacturing_date)->get();*/
+        $products = Product::all();
+        return view('pages.all-test')->with([
+            'products' => $products
+        ]);
     }
 
 }
