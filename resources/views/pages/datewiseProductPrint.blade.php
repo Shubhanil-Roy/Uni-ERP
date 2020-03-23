@@ -3,30 +3,11 @@
 
     <link href="{{asset('assets/plugins/bootstrap-datepicker/bootstrap-datepicker.min.css')}}" rel="stylesheet"
           type="text/css"/>
-    <link href="{{asset('assets/plugins/select2/dist/css/select2.min.css" rel="stylesheet')}}" type="text/css"/>
-    <link href="{{asset('assets/plugins/switchery/dist/switchery.min.css')}}" rel="stylesheet"/>
-    <link href="{{asset('assets/plugins/bootstrap-select/bootstrap-select.min.css')}}" rel="stylesheet"/>
-    <link href="{{asset('assets/plugins/bootstrap-tagsinput/dist/bootstrap-tagsinput.css')}}" rel="stylesheet"/>
-    <link href="{{asset('assets/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css')}}"
-          rel="stylesheet"/>
-    <link href="{{asset('assets/plugins/multiselect/css/multi-select.css')}}" rel="stylesheet" type="text/css"/>
-    <link href="{{asset('assets/plugins/wizard/steps.css')}}" rel="stylesheet">
-    <!--alerts CSS -->
-    <link href="{{asset('assets/plugins/sweetalert/sweetalert.css')}}" rel="stylesheet" type="text/css">
-    <!-- Typehead CSS -->
-    <link href="{{asset('assets/plugins/typeahead.js-master/dist/typehead-min.css')}}" rel="stylesheet">
+
     <!-- Page plugins css -->
     <link href="{{asset('assets/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css')}}"
           rel="stylesheet">
-    <link href="{{asset('assets/plugins/clockpicker/dist/jquery-clockpicker.min.css')}}" rel="stylesheet">
-    <!-- Color picker plugins css -->
-    <link href="{{asset('assets/plugins/jquery-asColorPicker-master/css/asColorPicker.css')}}" rel="stylesheet">
-    <!-- Date picker plugins css -->
-    <link href="{{asset('assets/plugins/bootstrap-datepicker/bootstrap-datepicker.min.css')}}" rel="stylesheet"
-          type="text/css"/>
-    <!-- Daterange picker plugins css -->
-    <link href="{{asset('assets/plugins/timepicker/bootstrap-timepicker.min.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/plugins/bootstrap-daterangepicker/daterangepicker.css')}}" rel="stylesheet">
+
     <div class="page-wrapper">
         <!-- ============================================================== -->
         <!-- Bread crumb and right sidebar toggle -->
@@ -62,7 +43,7 @@
             <!-- Validation wizard -->
             <div class="row">
                 <div class="col-12">
-                    <form method="post" action="{{--{{route('dateWisePrintPost')}}--}}">
+                    <form method="post" action="{{route('dateWisePrintPost')}}">
                         @csrf
                         <div class="card">
                             <div class="card-body">
@@ -71,7 +52,8 @@
                                         <div class="example">
                                             <h5 class="box-title m-t-30">Starting Date</h5>
                                             <div class="input-group">
-                                                <input type="text" class="form-control" id="datepicker-autoclose" placeholder="dd-MM-yyyy" name="start_date" >
+                                                <input type="date" class="form-control" id="datepicker-autoclose"
+                                                       placeholder="dd-MM-yyyy" name="start_date" >
                                                 <span class="input-group-addon"><i class="icon-calender"></i></span> </div>
                                         </div>
                                     </div>
@@ -79,7 +61,8 @@
                                         <div class="example">
                                             <h5 class="box-title m-t-30">Ending Date</h5>
                                            <div class="input-group">
-                                                <input type="text" class="form-control" id="datepicker-autoclose-2" placeholder="dd-MM-yyyy" name="end_date" >
+                                                <input type="date" class="form-control" id="datepicker-autoclose-2"
+                                                       placeholder="dd-MM-yyyy" name="end_date" >
                                                 <span class="input-group-addon"><i class="icon-calender"></i></span> </div>
                                         </div>
                                     </div>
@@ -248,94 +231,11 @@
     <script src="{{asset('assets/plugins/bootstrap-daterangepicker/daterangepicker.js')}}"></script>
     <script>
         // MAterial Date picker
-        $('#mdate').bootstrapMaterialDatePicker({weekStart: 0, time: false});
-        $('#timepicker').bootstrapMaterialDatePicker({format: 'HH:mm', time: true, date: false});
-        $('#date-format').bootstrapMaterialDatePicker({format: 'dddd DD MMMM YYYY - HH:mm'});
+        $('#mdate').bootstrapMaterialDatePicker({ weekStart : 0, time: false });
+        $('#timepicker').bootstrapMaterialDatePicker({ format : 'HH:mm', time: true, date: false });
+        $('#date-format').bootstrapMaterialDatePicker({ format : 'dddd DD MMMM YYYY - HH:mm' });
 
-        $('#min-date').bootstrapMaterialDatePicker({format: 'DD/MM/YYYY HH:mm', minDate: new Date()});
-        // Clock pickers
-        $('#single-input').clockpicker({
-            placement: 'bottom',
-            align: 'left',
-            autoclose: true,
-            'default': 'now'
-        });
-        $('.clockpicker').clockpicker({
-            donetext: 'Done',
-        }).find('input').change(function () {
-            console.log(this.value);
-        });
-        $('#check-minutes').click(function (e) {
-            // Have to stop propagation here
-            e.stopPropagation();
-            input.clockpicker('show').clockpicker('toggleView', 'minutes');
-        });
-        if (/mobile/i.test(navigator.userAgent)) {
-            $('input').prop('readOnly', true);
-        }
-        // Colorpicker
-        $(".colorpicker").asColorPicker();
-        $(".complex-colorpicker").asColorPicker({
-            mode: 'complex'
-        });
-        $(".gradient-colorpicker").asColorPicker({
-            mode: 'gradient'
-        });
-        // Date Picker
-        jQuery('.mydatepicker, #datepicker').datepicker();
-        $(function datePicker() {
-            jQuery('#datepicker-autoclose').datepicker({
-                format: 'dd-MM-yyyy',
-                autoclose: true,
-                todayHighlight: true
-            });
-            jQuery('#datepicker-autoclose-2').datepicker({
-                format: 'dd-MM-yyyy',
-                autoclose: true,
-                todayHighlight: true
-            });
-        });
-        $(function datePicker() {
-            jQuery('#datepicker-autoclose-expire').datepicker({
-                format: 'dd-MM-yyyy',
-                autoclose: true,
-                todayHighlight: true
-            });
-        });
-
-        jQuery('#date-range').datepicker({
-            toggleActive: true
-        });
-        jQuery('#datepicker-inline').datepicker({
-            todayHighlight: true
-        });
-        // Daterange picker
-        $('.input-daterange-datepicker').daterangepicker({
-            buttonClasses: ['btn', 'btn-sm'],
-            applyClass: 'btn-danger',
-            cancelClass: 'btn-inverse'
-        });
-        $('.input-daterange-timepicker').daterangepicker({
-            timePicker: true,
-            format: 'MM/DD/YYYY h:mm A',
-            timePickerIncrement: 30,
-            timePicker12Hour: true,
-            timePickerSeconds: false,
-            buttonClasses: ['btn', 'btn-sm'],
-            applyClass: 'btn-danger',
-            cancelClass: 'btn-inverse'
-        });
-        $('.input-limit-datepicker').daterangepicker({
-            format: 'MM/DD/YYYY',
-            minDate: '06/01/2015',
-            maxDate: '06/30/2015',
-            buttonClasses: ['btn', 'btn-sm'],
-            applyClass: 'btn-danger',
-            cancelClass: 'btn-inverse',
-            dateLimit: {
-                days: 6
-            }
-        });
+        $('#min-date').bootstrapMaterialDatePicker({ format : 'DD/MM/YYYY HH:mm', minDate : new Date() });
     </script>
 
     <!-- <script src="assets/plugins/moment/min/moment.min.js"></script> -->

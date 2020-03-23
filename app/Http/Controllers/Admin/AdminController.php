@@ -251,7 +251,8 @@ class AdminController extends Controller
         $end_date = new Carbon($request->end_date);
         $start_date = $start_date->format('Y-m-d')." 00:00:00";
         $end_date = $end_date->format('Y-m-d')." 00:00:00";
-        $products = Product::whereBetween('created_at', [$start_date, $end_date])->get();
+
+        $products = Product::whereBetween('manufacturing_date', [$start_date, $end_date])->get();
 
         return view('pages.dateWisePrint')->with([
             'products' => $products,

@@ -336,8 +336,8 @@
                         <li><a href="{{route('addproducts')}}">Add Product</a></li>
                         <li><a  href="{{route('allproducts')}}">All Products</a></li>
                         {{--<li><a href="{{route('printproducts')}}">Print All Products</a></li>--}}
-                        <li><a href="{{route('datewiseProductPrint')}}"> Date Wise Product Print </a></li>
                         <li><a target="_blank" href="{{route('printlayout')}}">Print Products</a></li>
+                        <li><a href="{{route('datewiseProductPrint')}}"> Date Wise Product Print </a></li>
                     </ul>
                 </li>
                 <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-email"></i><span class="hide-menu">Deaaler</span></a>
