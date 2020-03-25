@@ -131,7 +131,7 @@
                     @auth
                         <a href="{{ route('allproducts') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        {{--<a href="{{ route('login') }}">Login</a>--}}
 
                        {{-- @if (Route::has('register'))
                             <a href="{{ route('register') }}">Register</a>
@@ -142,7 +142,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    {{config('Uniluxx Dealer Admin Page','Uniluxx Dealer Admin Page')}}
+                    {{config('Uniluxx Dealer Admin Panel','Uniluxx Dealer Admin Panel')}}
                 </div>
 
             </div>
