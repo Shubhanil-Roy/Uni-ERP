@@ -14,7 +14,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body>
+<body style="background-image: url('{{asset('assets/images/background/login-register.jpg')}}')">
 <div id="app">
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
@@ -32,7 +32,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>--}}
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/') }}" style="color: white">
                     {{ config('Uniluxx Dealer Admin Panel', 'Uniluxx Dealer Admin Panel') }}
                 </a>
             </div>

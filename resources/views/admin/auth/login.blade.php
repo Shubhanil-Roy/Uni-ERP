@@ -8,9 +8,9 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Admin Login</div>
+                    <div class="card-header" >Admin Login</div>
 
-                    <div class="card-body">
+                    <div class="card-body" {{--style="background-color: #ff3e31"--}}>
                         <form class="form-horizontal" method="POST" action="{{ route('admin.auth.loginAdmin') }}">
                             {{ csrf_field() }}
 

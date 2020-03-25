@@ -43,7 +43,7 @@
             <!-- Validation wizard -->
             <div class="row">
                 <div class="col-12">
-                    <form method="post" action="{{route('dateWisePrintPost')}}">
+                    <form method="post" target="_blank" action="{{route('dateWisePrintPost')}}">
                         @csrf
                         <div class="card">
                             <div class="card-body">

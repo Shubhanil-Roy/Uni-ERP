@@ -88,7 +88,7 @@
 
                                                 <tr>
                                                     <td>M.R.P. (Incl. of all taxs) :</td>
-                                                    <td>{{$product->price}}</td>
+                                                    <td>&#8377; {{$product->price}}</td>
                                                 </tr>
                                             </table>
                                         </tr>
@@ -182,7 +182,7 @@
 
                                                     <tr>
                                                         <td>M.R.P. (Incl. of all taxs) :</td>
-                                                        <td>{{$product->price}}</td>
+                                                        <td>&#8377; {{$product->price}}</td>
                                                     </tr>
                                                 </table>
                                             </tr>
