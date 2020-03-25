@@ -84,6 +84,7 @@
                     <form class="form-horizontal" method="POST" action="{{ route('admin.auth.loginAdmin') }}">
                         {{ csrf_field() }}
 
+                        <h3 class="box-title m-b-20" style="color: red">Uniluxx Dealer Admin Sign In</h3>
                         <div class="form-group row{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email" class="col-md-4 col-form-label ">E-Mail Address</label>
 
