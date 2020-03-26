@@ -35,7 +35,7 @@
                 @foreach($products as $product)
                     @if($loop->iteration % 2 == 1)
                         <div>
-                            <div id="right" {{--class="pull-right"--}} style="margin-bottom: 7rem;width: 49%">
+                            <div id="right" {{--class="pull-right"--}} style="margin-bottom: 6rem;width: 49%">
                                 <table>
                                     <table>
                                         <th colspan="4" style="width: 94%">
@@ -128,7 +128,7 @@
                                 </table>
                             </div>
                             @else
-                                <div id="left" {{--class="pull-right"--}} style="margin-bottom: 7rem;width: 49%">
+                                <div id="left" {{--class="pull-right"--}} style="margin-bottom: 6rem;width: 49%">
                                     <table>
                                         <table>
                                             <th colspan="4" style="width: 94%">

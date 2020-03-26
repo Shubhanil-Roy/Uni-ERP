@@ -36,13 +36,21 @@ Route::prefix('admin')->group(function () {
 Route::post('addproductsStore','Admin\AdminController@addproductsStore')->name('addproductsStore')->middleware('auth:admin');
 Route::get('addproducts', 'Admin\AdminController@addproducts')->name('addproducts')->middleware('auth:admin');
 Route::get('allproducts', 'Admin\AdminController@allproducts')->name('allproducts')->middleware('auth:admin');
-/*Route::get('printproducts', 'Admin\AdminController@printproducts')->name('printproducts');*/
+
 Route::get('printlayout', 'Admin\AdminController@printlayout')->name('printlayout')->middleware('auth:admin');
 Route::get('dropProduct{id}', 'Admin\AdminController@dropProduct')->name('dropProduct')->middleware('auth:admin');
 
-Route::get('testproducts', 'Admin\AdminController@testproducts')->name('testproducts')->middleware('auth:admin');
+/*Route::post('particularProductPost', 'Admin\AdminController@particularProductPost')->name('particularProductPost')->middleware('auth:admin');
+ Route::get('particularProduct', 'Admin\AdminController@particularProduct')->name('particularProduct')->middleware('auth:admin');*/
+
+Route::get('printOneProduct', 'Admin\AdminController@printOneProduct')->name('printOneProduct')->middleware('auth:admin');
+
 Route::get('datewiseProductPrint', 'Admin\AdminController@datewiseProductPrint')->name('datewiseProductPrint')->middleware('auth:admin');
 Route::post('dateWisePrintPost', 'Admin\AdminController@dateWisePrintPost')->name('dateWisePrintPost')->middleware('auth:admin');
+
+Route::get('warranty', 'Admin\AdminController@warranty')->name('warranty')->middleware('auth:admin');
+Route::post('warrantyclaimPost', 'Admin\AdminController@warrantyclaimPost')->name('warrantyclaimPost')->middleware('auth:admin');
+
 
 Route::get('addfactory', 'Admin\AdminController@addManufacture')->name('addManufacture')->middleware('auth:admin');
 Route::get('allfactories', 'Admin\AdminController@allManufacture')->name('allManufacture')->middleware('auth:admin');

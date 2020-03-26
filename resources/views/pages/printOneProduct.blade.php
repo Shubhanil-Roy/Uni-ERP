@@ -33,6 +33,7 @@
         <div class="card card-body printableArea" style="position: initial">
             <div class="container">
                 @foreach($products as $product)
+                    @for($i=0; $i<$product->quantity; $i++)
                     @if($loop->iteration % 2 == 1)
                         <div>
                             <div id="right" {{--class="pull-right"--}} style="margin-bottom: 6rem;width: 49%">
@@ -223,19 +224,11 @@
                                 </div>
                         </div>
                     @endif
+                    @endfor
                 @endforeach
             </div>
         </div>
     </div>
-    {{--<div class="col-lg-12">
-        <div class="clearfix"></div>
-        <hr>
-        <div class="text-right">
-            --}}{{--<a href="{{route('customer.printpdf')}}">Print PDF</a>--}}{{--
-            <button id="print" class="btn btn-danger" type="button"><span><i class="fa fa-print"></i> Print</span>
-            </button>
-        </div>
-    </div>--}}
 </div>
 
 

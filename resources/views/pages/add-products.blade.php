@@ -69,7 +69,7 @@
                                                        class="col-md-3 text-right col-form-label">Length</label>
                                                 <div class="col-md-8">
                                                     <div class="form-group green-border-focus">
-                                                        <input type="number" class="form-control" name="length"
+                                                        <input type="number" class="form-control" name="length" placeholder="In INCH"
                                                                id="length"> </input>
                                                     </div>
                                                 </div>
@@ -83,7 +83,7 @@
                                                        class="col-md-3 text-right col-form-label">Width</label>
                                                 <div class="col-md-8">
                                                     <div class="form-group green-border-focus">
-                                                        <input type="number" class="form-control" name="width" id="width">
+                                                        <input type="number" class="form-control" placeholder="In INCH" name="width" id="width">
 
                                                     </div>
                                                 </div>
@@ -99,8 +99,22 @@
                                                 <div class="col-md-8">
                                                     <div class="form-group green-border-focus">
                                                         <input type="number" class="form-control" name="height"
-                                                               id="height">
+                                                               placeholder="In INCH" id="height">
 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <div class="form-group row">
+                                                <label for="identity"
+                                                       class="col-md-3 text-right col-form-label">Quantity</label>
+                                                <div class="col-md-3">
+                                                    <div class="form-group green-border-focus">
+                                                        <input type="number" class="form-control" min="1" name="quantity"
+                                                                value="">
                                                     </div>
                                                 </div>
                                             </div>
@@ -111,7 +125,7 @@
                                             <div class="form-group row">
                                                 <label for="price"
                                                        class="col-md-3 text-right col-form-label">Price</label>
-                                                <div class="col-md-8">
+                                                <div class="col-md-4">
                                                     <div class="form-group green-border-focus">
                                                         <input type="number" class="form-control" name="price" id="price">
 

@@ -149,6 +149,7 @@ class AdminController extends Controller
         $addproductsStore->length = $request->length;
         $addproductsStore->width = $request->width;
         $addproductsStore->height = $request->height;
+        $addproductsStore->quantity = $request->quantity;
         $addproductsStore->price = $request->price;
         $addproductsStore->manufacturing_date = $request->manufacturing_date;
         $addproductsStore->manufacturing_place_id = $request->manufacturing_place_id;
@@ -242,6 +243,34 @@ class AdminController extends Controller
             'products' => $product
         ]);
     }
+    /*public function particularProductPost(Request $request){
+
+        $start_date = new Carbon($request->start_date);
+        $end_date = new Carbon($request->end_date);
+        $start_date = $start_date->format('Y-m-d')." 00:00:00";
+        $end_date = $end_date->format('Y-m-d')." 00:00:00";
+
+        $products = Product::with('quantity', [$start_date, $end_date])->get();
+
+        return view('pages.printOneProduct')->with([
+            'products' => $products,
+            'type' => 'dated',
+            'start_date_request' => $request->start_date,
+            'end_date_request' => $request->end_date
+        ]);
+    }*/
+    /*public function particularProduct(Request $request){
+        $product = Product::find('id',$request->id);
+        return view('pages.particularProduct')->with([
+            'products' =>$product
+        ]);
+    }*/
+    public function printOneProduct(){
+        $product =Product::all();
+        return view('pages.printOneProduct')->with([
+            'products' => $product
+        ]);
+    }
     public function datewiseProductPrint(){
         return view('pages.datewiseProductPrint');
     }
@@ -270,20 +299,48 @@ class AdminController extends Controller
             'abc'=> $product
         ]);
 
-
         if($request->has('download')){
             $pdf = PDF::loadView('pages.pdf_view');
             return $pdf->download('pdfview.pdf');
         }
-
         return view('pages.pdf_view');
     }
-    public function testproducts(Request $request){
-/*        $products = Product::where('manufacturing_date',$request->manufacturing_date)->get();*/
-        $products = Product::all();
-        return view('pages.all-test')->with([
-            'products' => $products
-        ]);
+
+    public function warranty(){
+        return view('pages.warranty-claim');
     }
+
+    public function warrantyclaimPost(Request $request){
+
+        $start_date = new Carbon($request->start_date);
+        $end_date = new Carbon($request->end_date);
+        $warranty = $request->warranty_time;
+        $start_date = $start_date->format('Y-m-d')." 00:00:00";
+        $end_date = $end_date->format('Y-m-d')." 00:00:00";
+
+
+        $total_date = ($start_date + $warranty);
+
+        if ($total_date <= $end_date){
+            $product= 'in warranty';
+        }else{
+            $product= 'out of warranty';
+        }
+
+        return view('pages.warrantyClaimPage')->with([
+            'type' => 'dated',
+            'start_date_request' => $request->start_date,
+            'end_date_request' => $request->end_date,
+            'products' =>$product,
+            'warranty_time_request' => $request->warranty_time
+        ]);
+
+
+    }
+
+
+
+
+
 
 }
