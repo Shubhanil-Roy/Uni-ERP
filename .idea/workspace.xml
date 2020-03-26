@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cdf3e035-e170-4fd8-b420-49f4c489c33d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/datewiseProductPrint.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/datewiseProductPrint.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,7 +246,7 @@
       <workItem from="1584938551442" duration="10033000" />
       <workItem from="1585029810166" duration="5913000" />
       <workItem from="1585056135877" duration="1968000" />
-      <workItem from="1585141794742" duration="7676000" />
+      <workItem from="1585141794742" duration="12131000" />
     </task>
     <task id="LOCAL-00001" summary="coommit">
       <created>1579617948919</created>
@@ -402,7 +402,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585152567388</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Print Layout Complete with Admin Login Layout">
+      <created>1585152832852</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1585152832852</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -430,10 +437,10 @@
     </state>
     <state x="427" y="157" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1584789953595" />
     <state x="450" y="186" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.860@0.0.1440.860" timestamp="1579623582761" />
-    <state x="325" y="0" key="CommitChangelistDialog2" timestamp="1585152565543">
+    <state x="325" y="0" key="CommitChangelistDialog2" timestamp="1585152831333">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="325" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585152565543" />
+    <state x="325" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585152831333" />
     <state x="343" y="0" key="CommitChangelistDialog2/0.0.1440.860@0.0.1440.860" timestamp="1579681490924" />
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1583913700457">
       <screen x="0" y="0" width="1366" height="728" />
@@ -495,10 +502,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="567" y="338" key="VCS.ChangelistChooser/0.0.1440.860@0.0.1440.860" timestamp="1579617973506" />
-    <state x="296" y="134" key="Vcs.Push.Dialog.v2" timestamp="1585152571799">
+    <state x="296" y="134" key="Vcs.Push.Dialog.v2" timestamp="1585152835303">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="296" y="134" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1585152571799" />
+    <state x="296" y="134" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1585152835303" />
     <state x="312" y="158" key="Vcs.Push.Dialog.v2/0.0.1440.860@0.0.1440.860" timestamp="1579681397414" />
     <state x="359" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1584938552608">
       <screen x="0" y="0" width="1366" height="728" />
