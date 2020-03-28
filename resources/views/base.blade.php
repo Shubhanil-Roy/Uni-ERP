@@ -84,8 +84,9 @@
 <!-- end - This is for export functionality only -->
 <script src="{{asset('js/jquery.PrintArea.js')}}" type="text/JavaScript"></script>
 
-
-
+<!-- Chart JS -->
+<script src="{{asset('assets/plugins/Chart.js/chartjs.init.js')}}"></script>
+<script src="{{asset('assets/plugins/Chart.js/Chart.min.js')}}"></script>
 
 <script>
     $(document).ready(function() {
@@ -147,6 +148,18 @@
         buttons: [
             'copy', 'csv', 'excel', 'pdf', 'print'
         ]
+    });
+</script>
+
+<script>
+    $("input#UserName").on({
+        keydown: function(e) {
+            if (e.which === 32)
+                return false;
+        },
+        change: function() {
+            this.value = this.value.replace(/\s/g, "");
+        }
     });
 </script>
 </body>

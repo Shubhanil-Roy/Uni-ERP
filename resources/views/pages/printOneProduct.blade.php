@@ -6,6 +6,7 @@
             border: 0.5px solid black;
         }
 
+
         table {
             /*border-collapse: collapse;*/
             width: 100%;
@@ -129,7 +130,7 @@
                                 </table>
                             </div>
                             @else
-                                <div id="left" {{--class="pull-right"--}} style="margin-bottom: 6rem;width: 49%">
+                                <div id="left" {{--class="pull-right"--}} style="margin-bottom: 7rem;width: 49%">
                                     <table>
                                         <table>
                                             <th colspan="4" style="width: 94%">

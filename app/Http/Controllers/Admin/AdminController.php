@@ -11,6 +11,7 @@ use App\Http\Controllers\Controller;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use PDF;
 use Carbon\Carbon;
+use App\Model\DealerToProduct;
 class AdminController extends Controller
 {
 
@@ -129,12 +130,7 @@ class AdminController extends Controller
 
         ]);
     }
-    public function printproducts(){
-        $products = Product::all();
-        return view('pages.print-all-products')->with([
-            'products' => $products
-        ]);
-    }
+
     /*public function print(){
         $print = Product::all();
         return view('pages.print-products')->with([
@@ -163,6 +159,39 @@ class AdminController extends Controller
         $addproductsStore->qr_code = base64_encode(QrCode::generate(url('/').'/api/'.$serialno));
         $addproductsStore->save();
         return redirect()->route('allproducts');
+    }
+
+    public function UpdateProductsStore(Request $request){
+        $factory = ManufacturePlace::find($request->manufacturing_place_id);
+        $updateproductsStore = Product::find($request->id);
+        $updateproductsStore->identity = $request->identity;
+        $updateproductsStore->name = $request->name;
+        $updateproductsStore->length = $request->length;
+        $updateproductsStore->width = $request->width;
+        $updateproductsStore->height = $request->height;
+        $updateproductsStore->quantity = $request->quantity;
+        $updateproductsStore->price = $request->price;
+        $updateproductsStore->manufacturing_date = $request->manufacturing_date;
+        $updateproductsStore->manufacturing_place_id = $request->manufacturing_place_id;
+        $serialno = 'Uni/'.$factory->short_name.'/'.rand(10000,99999);
+        $present = Product::where('sl_no', $serialno)->first();
+        if($present){
+            $serialno = 'Uni/'.$factory->short_name.'/'.rand(10000,99999);
+        }
+        $updateproductsStore->sl_no = $serialno;
+        $updateproductsStore->warranty_time = $request->warranty_time;
+        $updateproductsStore->qr_code = base64_encode(QrCode::generate(url('/').'/api/'.$serialno));
+        $updateproductsStore->save();
+        return redirect()->route('allproducts');
+    }
+
+    public function ViewProduct($id){
+        $viewProduct = Product::where('id',$id)->first();
+        $factories = ManufacturePlace::all();
+        return view('pages.view-all-products')->with([
+            'viewProduct' => $viewProduct,
+            'factories' => $factories
+        ]);
     }
     public function deleteProduct(Request $request){
         Product::findOrFail($request->id)->delete();
@@ -243,38 +272,37 @@ class AdminController extends Controller
             'products' => $product
         ]);
     }
-    /*public function particularProductPost(Request $request){
+    public function particularProductPost(Request $request){
 
-        $start_date = new Carbon($request->start_date);
-        $end_date = new Carbon($request->end_date);
-        $start_date = $start_date->format('Y-m-d')." 00:00:00";
-        $end_date = $end_date->format('Y-m-d')." 00:00:00";
-
-        $products = Product::with('quantity', [$start_date, $end_date])->get();
+        $products = Product::where('name',$request->name)->get();
 
         return view('pages.printOneProduct')->with([
-            'products' => $products,
-            'type' => 'dated',
-            'start_date_request' => $request->start_date,
-            'end_date_request' => $request->end_date
-        ]);
-    }*/
-    /*public function particularProduct(Request $request){
-        $product = Product::find('id',$request->id);
-        return view('pages.particularProduct')->with([
-            'products' =>$product
-        ]);
-    }*/
-    public function printOneProduct(){
-        $product =Product::all();
-        return view('pages.printOneProduct')->with([
-            'products' => $product
+            'products' => $products
         ]);
     }
+    public function particularProduct(Request $request,$id){
+        $product = Product::where('id',$request->id)->get();
+        return view('pages.all-test')->with([
+            'products' =>$product
+        ]);
+    }
+
     public function datewiseProductPrint(){
         return view('pages.datewiseProductPrint');
     }
 
+    public function printproducts(){
+        $products = Product::all();
+        return view('pages.print-all-products')->with([
+            'products' => $products
+        ]);
+    }
+    public function printOneProduct(Request $request){
+        $product = Product::all();
+        return view('pages.printOneProduct')->with([
+            'products' => $product
+        ]);
+    }
     public function dateWisePrintPost(Request $request){
         $start_date = new Carbon($request->start_date);
         $end_date = new Carbon($request->end_date);
@@ -311,34 +339,66 @@ class AdminController extends Controller
     }
 
     public function warrantyclaimPost(Request $request){
+       // dd($request);
 
-        $start_date = new Carbon($request->start_date);
-        $end_date = new Carbon($request->end_date);
-        $warranty = $request->warranty_time;
-        $start_date = $start_date->format('Y-m-d')." 00:00:00";
-        $end_date = $end_date->format('Y-m-d')." 00:00:00";
+         $product = DealerToProduct::where('invoice_no', $request->invoice_no)->with('dealer_to_products_to_products')->get()->first();
+       // $products= Product::with('product_to_invoice','getWarrantyVoidAttribute')->get()->first();
+        $sold_date = new Carbon($request->start_date);
+        $today_date = new Carbon($request->end_date);
+        /*$warranty = $request->warranty_time;*/
+        $sold_date = $sold_date->format('Y-m-d')." 00:00:00";
+        $today_date = $today_date->format('Y-m-d')." 00:00:00";
+       // dd($product);
 
-
-        $total_date = ($start_date + $warranty);
-
-        if ($total_date <= $end_date){
-            $product= 'in warranty';
-        }else{
-            $product= 'out of warranty';
+        //if($product->invoice_date->count()>0){
+        if(!empty((array) $product)){
+            $date = $product->invoice_date;
+            $mod_date = strtotime($date."+ ".$product->dealer_to_products_to_products->warranty_time." years");
+           // return $mod_date;
+            {
+                if ($mod_date <= $today_date){
+                    return  /*view('pages.warrantyClaimPage')->with([*/
+                        'Product is In Warranty'
+                        /*])*/;
+                }else{
+                    return 'Product is Out Of Warranty';
+                    /*return view('pages.warrantyClaimPage')->with([
+                        'products'=> $product,
+                        'message'=>'Product is Out Of Warranty'
+                    ]);*/
+                }
+            }
         }
+        else{
+            return 'no invoice';
+        }
+        //dd($mod_date);
 
-        return view('pages.warrantyClaimPage')->with([
+        /*if($product->warranty_time->count() > 0){
+            //$date = $product->product_to_invoice->invoice_date;
+            $date = $product->sold_date;
+            $mod_date = strtotime($date."+ ".$product->warranty_time." years");
+            return $mod_date;
+        }
+        else{
+            return 'no invoice';
+        }*/
+
+      return view('pages.warrantyClaimPage')->with([
             'type' => 'dated',
             'start_date_request' => $request->start_date,
             'end_date_request' => $request->end_date,
             'products' =>$product,
-            'warranty_time_request' => $request->warranty_time
+            'warranty_time_request' => $request->warranty_time,
+          'today' => $today_date
         ]);
 
 
     }
 
-
+    public function sales(){
+        return view('pages.saleschart');
+    }
 
 
 

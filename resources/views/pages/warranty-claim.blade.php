@@ -48,7 +48,16 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="row">
+
                                     <div class="col-md-6">
+                                        <div class="example">
+                                            <h5 class="box-title m-t-30">Product Sl No./ID</h5>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="Product Invoice" name="invoice_no" >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{--<div class="col-md-6">
                                         <div class="example">
                                             <h5 class="box-title m-t-30">Product Sold Date</h5>
                                             <div class="input-group">
@@ -57,22 +66,21 @@
                                                 <span class="input-group-addon"><i class="icon-calender"></i></span>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div>--}}
 
-                                    <div class="col-md-4">
+                                    {{--<div class="col-md-4">
                                         <div class="example">
                                             <h5 class="box-title m-t-30">Select Product Warranty in Years</h5>
                                             <div class="input-group">
                                                 <select name="warranty_time" id="warranty_time" class="form-control">
-                                                    <option>Years</option>
-                                                    <option value="1">1</option>
-                                                    <option value="3">3</option>
-                                                    <option value="5">5</option>
-                                                    <option value="10">10</option>
+                                                    <option value="1">1 Year</option>
+                                                    <option value="3">3 Years</option>
+                                                    <option value="5">5 Years</option>
+                                                    <option value="10">10 Years</option>
                                                 </select>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div>--}}
 
                                     <div class="col-md-6">
                                         <div class="example">
@@ -84,12 +92,12 @@
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                                 <div style="height: 5vh"></div>
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-success">Submit</button>
+                                   <button type="submit" class="btn btn-success">Submit</button>
                                 </div>
+                                <div id="div1"><h2></h2></div>
                             </div>
                         </div>
                     </form>
@@ -107,7 +115,15 @@
         <!-- ============================================================== -->
 
     </div>
-
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $.ajax({url: "demo_test.txt", success: function(result){
+                        $("#div1").html(result);
+                    }});
+            });
+        });
+    </script>
 
     <script src="{{asset('assets/plugins/jquery/jquery.min.js')}}"></script>
     <!-- Bootstrap tether Core JavaScript -->

@@ -83,7 +83,7 @@
                                                        class="col-md-3 text-right col-form-label">address</label>
                                                 <div class="col-md-8">
                                                     <div class="form-group green-border-focus">
-                                                        <textarea name="address" id="address"></textarea>
+                                                        <textarea name="address" rows="3" id="address"></textarea>
 
                                                     </div>
                                                 </div>
@@ -107,6 +107,73 @@
                                         </div>
                                     </div>
                                 </div>
+
+
+{{--
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="form-group row">
+                                            <label for="city"
+                                                   class="col-md-3 text-right col-form-label">City
+                                            </label>
+                                            <div class="col-md-5">
+                                                <div class="form-group green-border-focus">
+                                                    <input type="text" class="form-control"
+                                                           name="city"> </input>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="form-group row">
+                                            <label for="state"
+                                                   class="col-md-3 text-right col-form-label">State
+                                            </label>
+                                            <div class="col-md-5">
+                                                <div class="form-group green-border-focus">
+                                                    <input type="text" class="form-control"
+                                                           name="state"> </input>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="form-group row">
+                                            <label for="country"
+                                                   class="col-md-3 text-right col-form-label">Country
+                                            </label>
+                                            <div class="col-md-5">
+                                                <div class="form-group green-border-focus">
+                                                    <input type="text" class="form-control"
+                                                           name="country"> </input>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="form-group row">
+                                            <label for="pin"
+                                                   class="col-md-3 text-right col-form-label">PIN
+                                            </label>
+                                            <div class="col-md-5">
+                                                <div class="form-group green-border-focus">
+                                                    <input type="text" class="form-control"
+                                                           name="pin"> </input>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+--}}
 
 
                                 <div class="form-actions">

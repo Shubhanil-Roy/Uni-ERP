@@ -2,18 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdf3e035-e170-4fd8-b420-49f4c489c33d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_03_26_113343_add_sold_date_to_products.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_03_26_134929_add_quantity_to_products.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/particularProduct.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/printOneProduct.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/warranty-claim.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/saleschart.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/view-all-products.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/warrantyClaimPage.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.rnd" beforeDir="false" afterPath="$PROJECT_DIR$/.rnd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/AdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/base.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/base.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/component/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/component/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/add-products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/add-products.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/dateWisePrint.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/dateWisePrint.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/final-print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/final-print.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/test-all-products.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/add-dealer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/add-dealer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/add-manufacture.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/add-manufacture.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/all-products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/all-products.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/all-test.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/all-test.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/pdf_view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/pdf_view.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/print-all-products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/print-all-products.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/printOneProduct.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/printOneProduct.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/warranty-claim.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/warranty-claim.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -172,7 +178,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../victoria-junction" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../adminpress-20 (1)/adminpress-20/main/chart-echart.html" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -191,7 +197,7 @@
       <recent name="C:\Users\Tecions-Design\Documents\uniluxx-erp\public" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.phpunit.xml">
+  <component name="RunManager" selected="Laravel.Uniluxx-ERP">
     <configuration name="Uniluxx-ERP" type="LaravelStorm_run_conf_serve" factoryName="Laravel">
       <option name="host" value="localhost" />
       <option name="port" value="8000" />
@@ -257,7 +263,7 @@
       <workItem from="1584938551442" duration="10033000" />
       <workItem from="1585029810166" duration="5913000" />
       <workItem from="1585056135877" duration="1968000" />
-      <workItem from="1585141794742" duration="28415000" />
+      <workItem from="1585141794742" duration="84668000" />
     </task>
     <task id="LOCAL-00001" summary="coommit">
       <created>1579617948919</created>
@@ -427,7 +433,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585201303941</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Added Quantity Wise Product Print Layout">
+      <created>1585221054984</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1585221054984</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -443,31 +456,32 @@
     <MESSAGE value="Print Layout" />
     <MESSAGE value="Print Layout Complete" />
     <MESSAGE value="Print Layout Complete with Admin Login Layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="Print Layout Complete with Admin Login Layout" />
+    <MESSAGE value="Added Quantity Wise Product Print Layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Quantity Wise Product Print Layout" />
   </component>
   <component name="WindowStateProjectService">
     <state x="174" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579608689589">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="174" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.860@0.0.1440.860" timestamp="1579608689589" />
-    <state x="427" y="157" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1584789953595">
+    <state x="427" y="157" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1585309256729">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="427" y="157" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1584789953595" />
+    <state x="427" y="157" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1585309256729" />
     <state x="450" y="186" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.860@0.0.1440.860" timestamp="1579623582761" />
-    <state x="325" y="0" key="CommitChangelistDialog2" timestamp="1585201302292">
+    <state x="325" y="0" key="CommitChangelistDialog2" timestamp="1585221051807">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="325" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585201302292" />
+    <state x="325" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585221051807" />
     <state x="343" y="0" key="CommitChangelistDialog2/0.0.1440.860@0.0.1440.860" timestamp="1579681490924" />
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1583913700457">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1583913700457" />
-    <state x="474" y="156" key="FileChooserDialogImpl" timestamp="1585206777918">
+    <state x="474" y="156" key="FileChooserDialogImpl" timestamp="1585312386215">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="474" y="156" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1585206777917" />
+    <state x="474" y="156" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1585312386215" />
     <state x="500" y="184" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1579618231139" />
     <state width="1323" height="162" key="GridCell.Tab.0.bottom" timestamp="1581409487913">
       <screen x="0" y="0" width="1366" height="728" />
@@ -507,10 +521,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="402" y="178" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1585212226540" />
-    <state x="652" y="375" key="NewPhpFileDialog" timestamp="1585212259796">
+    <state x="652" y="375" key="NewPhpFileDialog" timestamp="1585311520671">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="652" y="375" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1585212259796" />
+    <state x="652" y="375" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1585311520671" />
     <state x="687" y="443" key="NewPhpFileDialog/0.0.1440.860@0.0.1440.860" timestamp="1579622241533" />
     <state x="184" y="6" key="SettingsEditor" timestamp="1584938442772">
       <screen x="0" y="0" width="1366" height="728" />
@@ -524,10 +538,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="567" y="338" key="VCS.ChangelistChooser/0.0.1440.860@0.0.1440.860" timestamp="1579617973506" />
-    <state x="296" y="134" key="Vcs.Push.Dialog.v2" timestamp="1585201306745">
+    <state x="296" y="134" key="Vcs.Push.Dialog.v2" timestamp="1585221059372">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="296" y="134" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1585201306745" />
+    <state x="296" y="134" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1585221059372" />
     <state x="312" y="158" key="Vcs.Push.Dialog.v2/0.0.1440.860@0.0.1440.860" timestamp="1579681397414" />
     <state x="359" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1584938552608">
       <screen x="0" y="0" width="1366" height="728" />
@@ -550,6 +564,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="414" y="137" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1584346094272" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1585386957438">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1585386957438" />
     <state x="363" y="152" width="670" height="574" key="search.everywhere.popup" timestamp="1584789049960">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -34,14 +34,17 @@ Route::prefix('admin')->group(function () {
 });
 
 Route::post('addproductsStore','Admin\AdminController@addproductsStore')->name('addproductsStore')->middleware('auth:admin');
+Route::post('UpdateProductsStore','Admin\AdminController@UpdateProductsStore')->name('UpdateProductsStore')->middleware('auth:admin');
+Route::get('ViewProduct/{id}','Admin\AdminController@ViewProduct')->name('ViewProduct')->middleware('auth:admin');
 Route::get('addproducts', 'Admin\AdminController@addproducts')->name('addproducts')->middleware('auth:admin');
 Route::get('allproducts', 'Admin\AdminController@allproducts')->name('allproducts')->middleware('auth:admin');
 
 Route::get('printlayout', 'Admin\AdminController@printlayout')->name('printlayout')->middleware('auth:admin');
+Route::get('printproducts', 'Admin\AdminController@printproducts')->name('printproducts')->middleware('auth:admin');
 Route::get('dropProduct{id}', 'Admin\AdminController@dropProduct')->name('dropProduct')->middleware('auth:admin');
 
-/*Route::post('particularProductPost', 'Admin\AdminController@particularProductPost')->name('particularProductPost')->middleware('auth:admin');
- Route::get('particularProduct', 'Admin\AdminController@particularProduct')->name('particularProduct')->middleware('auth:admin');*/
+Route::post('particularProductPost', 'Admin\AdminController@particularProductPost')->name('particularProductPost')->middleware('auth:admin');
+/*Route::get('product/{id}', 'Admin\AdminController@particularProduct')->name('particularProduct')->middleware('auth:admin');*/
 
 Route::get('printOneProduct', 'Admin\AdminController@printOneProduct')->name('printOneProduct')->middleware('auth:admin');
 
@@ -58,6 +61,7 @@ Route::post('addfactory', 'Admin\AdminController@addManufactureStore')->name('ad
 Route::get('dropfactory/{id}', 'Admin\AdminController@dropFactory')->name('dropFactory')->middleware('auth:admin');
 
 Route::get('adddealer', 'Admin\AdminController@addDealerPage')->name('addDealerPage')->middleware('auth:admin');
+Route::get('sales', 'Admin\AdminController@sales')->name('sales')->middleware('auth:admin');
 
 Route::post('addDealerPost', 'Admin\AdminController@addDealerPost')->name('addDealerPost')->middleware('auth:admin');
 Route::get('allDealers', 'Admin\AdminController@allDealers')->name('allDealers')->middleware('auth:admin');

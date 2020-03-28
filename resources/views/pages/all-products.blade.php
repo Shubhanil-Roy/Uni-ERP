@@ -68,7 +68,8 @@
                                         {{--<td>{{$product->qr_code}}</td>--}}
                                         <td class="text-nowrap">
                                             {{--<a href="#" data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>--}}
-                                            <a href="{{route('dropProduct',$product->id)}}" data-toggle="tooltip" data-original-title="Delete"> <i class="fa fa-close text-danger"></i> </a>
+                                            <a href="{{route('dropProduct',$product->id)}}" data-toggle="tooltip" data-original-title="Delete"> <i class="fa fa-close text-danger m-r-10"></i> </a>
+                                            <a href="{{route('ViewProduct',$product->id)}}" data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-inverse "></i> </a>
                                         </td>
                                         {{--<td>
                                             <button type="button"  class="btn btn-outline-danger" >Delete</button>
