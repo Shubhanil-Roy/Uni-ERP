@@ -3,7 +3,8 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="{{asset('assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css')}}"
+          rel="stylesheet">
 
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -53,9 +54,10 @@
                                             <h5 class="box-title m-t-30">Starting Date</h5>
                                             <div class="input-group">
                                                 <input type="text" class="form-control" id="mdate"
-                                                       placeholder="dd-MM-yyyy" name="start_date" >
+                                                       placeholder="dd-MM-yyyy" name="start_date">
                                                 <span class="input-group-addon"><i class="icon-calender"></i></span>
                                             </div>
+
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -63,7 +65,7 @@
                                             <h5 class="box-title m-t-30">Ending Date</h5>
                                             <div class="input-group">
                                                 <input type="text" class="form-control" id="mdate-2"
-                                                       placeholder="dd-MM-yyyy" name="end_date" >
+                                                       placeholder="dd-MM-yyyy" name="end_date">
                                                 <span class="input-group-addon"><i class="icon-calender"></i></span>
                                             </div>
                                         </div>
@@ -115,18 +117,19 @@
     <!-- Plugin JavaScript -->
 
     <script src="{{asset('assets/plugins/moment/moment.js')}}"></script>
-    <script src="{{asset('assets/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js')}}"></script>
+    <script
+        src="{{asset('assets/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js')}}"></script>
     <!-- Date Picker Plugin JavaScript -->
     <script src="{{asset('assets/plugins/bootstrap-datepicker/bootstrap-datepicker.min.js')}}"></script>
 
     <script>
         // MAterial Date picker
-        $('#mdate').bootstrapMaterialDatePicker({ weekStart : 0, time: false });
-        $('#mdate-2').bootstrapMaterialDatePicker({ weekStart : 0, time: false });
-        $('#timepicker').bootstrapMaterialDatePicker({ format : 'HH:mm', time: true, date: false });
-        $('#date-format').bootstrapMaterialDatePicker({ format : 'dddd DD MMMM YYYY - HH:mm' });
+        $('#mdate').bootstrapMaterialDatePicker({weekStart: 0, time: false});
+        $('#mdate-2').bootstrapMaterialDatePicker({weekStart: 0, time: false});
+        $('#timepicker').bootstrapMaterialDatePicker({format: 'HH:mm', time: true, date: false});
+        $('#date-format').bootstrapMaterialDatePicker({format: 'dddd DD MMMM YYYY - HH:mm'});
 
-        $('#min-date').bootstrapMaterialDatePicker({ format : 'DD/MM/YYYY HH:mm', minDate : new Date() });
+        $('#min-date').bootstrapMaterialDatePicker({format: 'DD/MM/YYYY HH:mm', minDate: new Date()});
         // Clock pickers
         $('#single-input').clockpicker({
             placement: 'bottom',
@@ -136,10 +139,10 @@
         });
         $('.clockpicker').clockpicker({
             donetext: 'Done',
-        }).find('input').change(function() {
+        }).find('input').change(function () {
             console.log(this.value);
         });
-        $('#check-minutes').click(function(e) {
+        $('#check-minutes').click(function (e) {
             // Have to stop propagation here
             e.stopPropagation();
             input.clockpicker('show').clockpicker('toggleView', 'minutes');

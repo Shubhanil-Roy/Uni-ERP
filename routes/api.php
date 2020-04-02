@@ -24,6 +24,7 @@ Route::post('addInvoice', 'API\AdminController@addProductInvoice')/*->middleware
 
 
 
+
 Route::get('allManufacture', 'API\AdminController@allManufacture');
 Route::get('allproducts', 'API\AdminController@allproducts');
 Route::get('ViewProduct/{id}', 'API\AdminController@ViewProduct');

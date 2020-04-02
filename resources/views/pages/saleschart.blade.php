@@ -1,57 +1,205 @@
 @extends('base')
 @section('content')
 
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('assets/images/favicon.png')}}">
+    <title>Admin Press Admin Template - The Ultimate Bootstrap 4 Admin Template</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="{{asset('assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheegt">
+    <!-- Custom CSS -->
+    <link href="{{asset('css/style.css')}}" rel="stylesheet">
+    <!-- You can change the theme colors from here -->
+    <link href="{{asset('css/colors/blue.css')}}" id="theme" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.3/css/bootstrap-select.min.css">
 
-    <div class="row page-titles">
-        <div class="col-md-5 align-self-center">
-            <h3 class="text-themecolor">Sales Chart</h3>
+
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+<div id="main-wrapper">
+    <!-- ============================================================== -->
+    <!-- Topbar header - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+
+    <!-- ============================================================== -->
+    <!-- End Topbar header -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Left Sidebar - style you can find in sidebar.scss  -->
+    <!-- ============================================================== -->
+
+    <!-- ============================================================== -->
+    <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Page wrapper  -->
+    <!-- ============================================================== -->
+    <div class="page-wrapper">
+        <!-- ============================================================== -->
+        <!-- Bread crumb and right sidebar toggle -->
+        <!-- ============================================================== -->
+        <div class="row page-titles">
+            <div class="col-md-5 align-self-center">
+                <h3 class="text-themecolor">Report Chart</h3>
+            </div>
+            <div class="col-md-7 align-self-center">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                    <li class="breadcrumb-item">Charts</li>
+                    <li class="breadcrumb-item active">Report</li>
+                </ol>
+            </div>
+            <div class="">
+                <button class="right-side-toggle waves-effect waves-light btn-inverse btn btn-circle btn-sm pull-right m-l-10"><i class="ti-settings text-white"></i></button>
+            </div>
         </div>
-        <div class="col-md-7 align-self-center">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                <li class="breadcrumb-item">Sales</li>
-                <li class="breadcrumb-item active">Sales Charts </li>
-            </ol>
+        <!-- ============================================================== -->
+        <!-- End Bread crumb and right sidebar toggle -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Container fluid  -->
+        <!-- ============================================================== -->
+        <div class="container-fluid">
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content -->
+            <!-- ============================================================== -->
+            <div class="row">
+                <!-- column -->
+
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Monthly/Yearly Report</h4>
+                            <div id="bar-chart" style="width:100%; height:400px;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                {{--<div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="panel panel-default">
+                            <div class="panel-heading"><b>Charts</b></div>
+                            <div class="panel-body">
+                                <canvas id="canvas" height="280" width="600"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>--}}
+
+                <script>
+                    var url = "{{route('stock/chart')}}";
+                    var Products = new Array();
+                    var Quantity = new Array();
+                    var Solds = new Array();
+                    $(document).ready(function(){
+                        $.get(url, function(response){
+                            response.forEach(function(data){
+                                Products.push(data.product_id);
+                                Quantity.push(data.stock_quantity);
+                                Solds.push(data.sold_stock);
+                            });
+                            var ctx = document.getElementById("bar-chart").getContext('2d');
+                            var myChart = new Chart(ctx, {
+                                type: 'bar',
+                                data: {
+                                    labels:Products,
+                                    datasets: [{
+                                        label: 'Quantity',
+                                        data: stock_quantity,
+                                        borderWidth: 1
+                                    }, {
+                                            label: 'Solds',
+                                            data: sold_stock,
+                                            borderWidth: 1
+                                        }
+                                    ]
+                                },
+                                options: {
+                                    scales: {
+                                        yAxes: [{
+                                            ticks: {
+                                                beginAtZero:true
+                                            }
+                                        }]
+                                    }
+                                }
+                            });
+                        });
+                    });
+                </script>
+
+                {{--<div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Weakly/Daily Report</h4>
+                            <div id="main" style="width:100%; height:400px;"></div>
+                        </div>
+                    </div>
+                </div>--}}
+
+            </div>
+            <!-- ============================================================== -->
+            <!-- End PAge Content -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Right sidebar -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- End Right sidebar -->
+            <!-- ============================================================== -->
         </div>
+        <!-- ============================================================== -->
+        <!-- End Container fluid  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- End footer -->
+        <!-- ============================================================== -->
     </div>
+    <!-- ============================================================== -->
+    <!-- End Page wrapper  -->
+    <!-- ============================================================== -->
+</div>
+<!-- ============================================================== -->
+<!-- End Wrapper -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- All Jquery -->
+<!-- ============================================================== -->
+<script src="{{asset('assets/plugins/jquery/jquery.min.js')}}"></script>
+<!-- Bootstrap tether Core JavaScript -->
+<script src="{{asset('assets/plugins/bootstrap/js/popper.min.js')}}"></script>
 
-    <div class="container-fluid">
-
-        <div class="col-lg-12">
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title">Yearly Report</h4>
-                    <div>
-                        <canvas id="chart2" height="150"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Monthly Report</h4>
-                        <div id="bar-chart" style="width:100%; height:400px;"></div>
-                    </div>
-                </div>
-            </div>
-            <!-- column -->
-            <!-- column -->
-            <div class="col-lg-12">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Line chart</h4>
-                        <div id="main" style="width:100%; height:400px;"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-
-
-
-    @stop
+<script src="{{asset('assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
+<!-- slimscrollbar scrollbar JavaScript -->
+<script src="{{asset('js/jquery.slimscroll.js')}}"></script>
+<!--Wave Effects -->
+<script src="{{asset('js/waves.js')}}"></script>
+<!--Menu sidebar -->
+<script src="{{asset('js/sidebarmenu.js')}}"></script>
+<!--stickey kit -->
+<script src="{{asset('assets/plugins/sticky-kit-master/dist/sticky-kit.min.js')}}"></script>
+<script src="{{asset('assets/plugins/sparkline/jquery.sparkline.min.js')}}"></script>
+<!--Custom JavaScript -->
+<script src="{{asset('js/custom.min.js')}}"></script>
+<!-- ============================================================== -->
+<!-- This page plugins -->
+<!-- ============================================================== -->
+{{--<!-- Chart JS -->--}}
+<script src="{{asset('assets/plugins/echarts/echarts-all.js')}}"></script>
+<script src="{{asset('assets/plugins/echarts/echarts-init.js')}}"></script>
+<!-- ============================================================== -->
+<!-- Style switcher -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.3/js/bootstrap-select.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js" charset="utf-8"></script>
+@stop

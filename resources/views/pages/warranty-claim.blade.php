@@ -43,7 +43,7 @@
             <!-- Validation wizard -->
             <div class="row">
                 <div class="col-12">
-                    <form method="post" target="_blank" action="{{route('warrantyclaimPost')}}">
+                    <form method="post" action="{{route('warrantyclaimPost')}}">
                         @csrf
                         <div class="card">
                             <div class="card-body">
@@ -82,7 +82,7 @@
                                         </div>
                                     </div>--}}
 
-                                    <div class="col-md-6">
+                                    {{--<div class="col-md-6">
                                         <div class="example">
                                             <h5 class="box-title m-t-30">Today</h5>
                                             <div class="input-group">
@@ -91,7 +91,7 @@
                                                 <span class="input-group-addon"><i class="icon-calender"></i></span>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div>--}}
                                 </div>
                                 <div style="height: 5vh"></div>
                                 <div class="form-group">

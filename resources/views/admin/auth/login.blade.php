@@ -14,6 +14,7 @@
                         <form class="form-horizontal" method="POST" action="{{ route('admin.auth.loginAdmin') }}">
                             {{ csrf_field() }}
 
+
                             <div class="form-group row{{ $errors->has('email') ? ' has-error' : '' }}">
                                 <label for="email" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
 

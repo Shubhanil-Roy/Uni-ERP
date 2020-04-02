@@ -24,7 +24,7 @@
         </div>
 
         <div class="container-fluid" >
-            @foreach($products as $product)
+           @foreach($products as $product)
                 <h1>
 
                 </h1>

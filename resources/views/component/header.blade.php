@@ -344,18 +344,26 @@
                         <li><a href="{{route('printproducts')}}"> Particular Product Print </a></li>
                     </ul>
                 </li>
+
                 <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-email"></i><span class="hide-menu">Deaaler</span></a>
                     <ul aria-expanded="false" class="collapse">
                         <li><a href="{{route('addDealerPage')}}">Add Dealer</a></li>
                         <li><a href="{{route('allDealers')}}">All Dealers</a></li>
                     </ul>
                 </li>
+
                 <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-email"></i><span class="hide-menu">Warranty Claim</span></a>
                     <ul aria-expanded="false" class="collapse">
                         <li><a href="{{route('warranty')}}">Warranty Claim</a></li>
                     </ul>
                 </li>
 
+                <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-email"></i><span class="hide-menu">Sales</span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a href="{{route('sales')}}">Sales Chart</a></li>
+                        <li><a href="{{route('salesform')}}">Sales Form</a></li>
+                    </ul>
+                </li>
 
 
             </ul>

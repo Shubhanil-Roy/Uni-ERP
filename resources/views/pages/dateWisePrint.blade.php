@@ -31,6 +31,7 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="card card-body printableArea" style="position: initial">
+
             <div class="container">
                 @foreach($products as $product)
                     @if($loop->iteration % 2 == 1)
