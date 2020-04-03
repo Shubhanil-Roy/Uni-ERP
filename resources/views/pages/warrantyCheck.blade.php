@@ -24,9 +24,9 @@
         </div>
 
         <div class="container-fluid" >
-                <h1>
-                    This Product is in Warranty !!
-                </h1>
+            <h1>
+                 No Invoice Generated, Regarding Your Invoice Number !!
+            </h1>
         </div>
 
         <div class="row">
@@ -96,4 +96,4 @@
     </div>
 
 
-    @stop
+@stop

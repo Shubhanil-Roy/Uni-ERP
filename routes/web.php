@@ -51,7 +51,9 @@ Route::prefix('admin')->group(function () {
     Route::post('dateWisePrintPost', 'Admin\AdminController@dateWisePrintPost')->name('dateWisePrintPost')->middleware('auth:admin');
 
     Route::get('warranty', 'Admin\AdminController@warranty')->name('warranty')->middleware('auth:admin');
-    Route::post('warrantyclaimPost', 'Admin\AdminController@warrantyclaimPost')->name('warrantyclaimPost')->middleware('auth:admin');
+    Route::get('NoInvoice', 'Admin\AdminController@warrantyClaimCheck')->name('warrantyClaimCheck')->middleware('auth:admin');
+    Route::get('OutOfWarranty', 'Admin\AdminController@OutOfWarranty')->name('OutOfWarranty')->middleware('auth:admin');
+    Route::post('WarrantyCheck', 'Admin\AdminController@WarrantyCheck')->name('WarrantyCheck')->middleware('auth:admin');
 
 
     Route::get('addfactory', 'Admin\AdminController@addManufacture')->name('addManufacture')->middleware('auth:admin');
@@ -68,6 +70,8 @@ Route::prefix('admin')->group(function () {
     Route::post('salesformPost', 'Admin\AdminController@salesformPost')->name('salesformPost')->middleware('auth:admin');
     Route::get('salesform', 'Admin\AdminController@salesform')->name('salesform')->middleware('auth:admin');
     Route::get('sales', 'Admin\AdminController@sales')->name('sales')->middleware('auth:admin');
+    Route::get('chart', 'Admin\AdminController@chart')->name('chart')->middleware('auth:admin');
+    Route::get('charts', 'Admin\AdminController@chart')->name('chart')->middleware('auth:admin');
     Route::get('stock/chart', 'Admin\AdminController@chart')->name('stock/chart')->middleware('auth:admin');
 
 });

@@ -9,6 +9,7 @@ use App\Model\Product;
 use App\Model\Stock;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use LaravelDaily\LaravelCharts\Classes\LaravelChart;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use PDF;
 use Carbon\Carbon;
@@ -380,12 +381,20 @@ class AdminController extends Controller
     {
         return view('pages.warranty-claim');
     }
+    public function warrantyClaimCheck()
+    {
+        return view('pages.warrantyCheck');
+    }
+    public function OutOfWarranty()
+    {
+        return view('pages.WarrantyOut');
+    }
 
     public function warrantyclaimPost(Request $request)
     {
         // dd($request);
 
-     $product = DealerToProduct::where('invoice_no', $request->invoice_no)->with('dealer_to_products_to_products')->get()->first();
+     $product = DealerToProduct::where('invoice_no', $request->invoice_no)->with('dealer_to_products_to_products')->first();
         // $product= Product::with('product_to_invoice','getWarrantyVoidAttribute')->get()->first();
         // $sold_date = new Carbon($request->start_date);
         // $today_date = new Carbon($request->end_date);
@@ -410,13 +419,13 @@ class AdminController extends Controller
             // return $mod_date;
             //dd($calculatedTime);
             {
-                $item = DealerToProduct::where('id', $request->invoice_no)->with('dealer_to_products_to_products')->get()->first();
+                $item = DealerToProduct::where('id', $request->invoice_no)->with('dealer_to_products_to_products')->first();
 
 //                $item = DealerToProduct::find()
                /*$product = DealerToProduct::all()->filter(
                     function ($item){*/
                         $invoiceDate = $item->invoice_date;
-                       // dd($invoiceDate);
+//                        dd($invoiceDate  );
                         $warranty_date = strtotime($invoiceDate . "+ " . $item->dealer_to_products_to_products->warranty_time . " years");
                         $unixtime = $warranty_date;
                         $calculatedTime = date("Y-m-d h:i:s A ", $unixtime);
@@ -428,7 +437,7 @@ class AdminController extends Controller
                         } else {
                             //dd($calculatedTime);
                               // return $item;
-                             return view('pages.warrantyClaimPage');
+                             return view('pages.OutOfWarranty');
                                 // return 'Product is Out of Warranty';
                         }
                     /*}
@@ -449,7 +458,7 @@ class AdminController extends Controller
 
             }
         } else {
-            return 'You Have Incorrect Invoice Number';
+           // return 'You Have Incorrect Invoice Number';
         }
 /*    }
 );*/
@@ -473,6 +482,48 @@ class AdminController extends Controller
 
 }
 
+    public function WarrantyCheck(Request $request){
+
+        $item = DealerToProduct::where('invoice_no', $request->invoice_no)->with('dealer_to_products_to_products')->first();
+
+        if (!empty((array)$item)) {
+
+            $invoiceDate = $item->invoice_date;
+            $warranty_date = strtotime($invoiceDate . "+ " . $item->dealer_to_products_to_products->warranty_time . " years");
+            $unixtime = $warranty_date;
+            $calculatedTime = date("Y-m-d h:i:s A ", $unixtime);
+            //dd($calculatedTime);
+
+            //$diff = $invoiceDate->diffInDays($calculatedTime);
+          //  dd($calculatedTime);
+                //if ( Carbon::now()->between( $calculatedTime, $item->invoiceDate,true) ) {
+
+                    if (Carbon::now() == $calculatedTime){
+                    return view('pages.warrantyClaimPage')->with([
+                        'items' =>$item
+                    ]);
+                    //return 'Product is In Warranty';
+                }elseif (Carbon::now() < $calculatedTime) {
+                        return view('pages.warrantyClaimPage')->with([
+                            'items' =>$item
+                        ]);
+                        // return 'Product is In Warranty';
+                    }
+                    else {
+
+                    return view('pages.WarrantyOut')->with([
+                        'items' =>$item
+                        ]);
+                   // return 'Product is Out of Warranty';
+                }
+        } else {
+            return view('pages.warrantyCheck')->with([
+                'items' =>$item
+            ]);
+        }
+    }
+
+
     public function sales()
     {
         return view('pages.saleschart');
@@ -492,13 +543,34 @@ class AdminController extends Controller
         return redirect()->route('sales');
     }
 
-    public function chart()
+    public function charts()
     {
         $result = \DB::table('stocks')
-            ->where('product_id','=','Products')
+            ->where('product_id','=','dealer_uniluxx')
             ->orderBy('stock_quantity', 'ASC')
            // ->orderBy('sold_stock', 'ASC')
             ->get();
         return response()->json($result);
     }
+    public function chart(){
+
+        $chart_options = [
+            'chart_title' => 'Quantity By Sold Stock',
+            'report_type' => 'group_by_date',
+            'model' => Stock::all(),
+            'group_by_field' => 'created_at',
+            'group_by_period' => 'month',
+            'chart_type' => 'bar',
+            'filter_field' => 'created_at',
+            'filter_days' => 30, // show only last 30 days
+        ];
+
+        $chart1 = new LaravelChart($chart_options);
+
+       // return response()->json(['pages.chart', compact('chart1')]);
+        return view('pages.chart')->with(['charts' => $chart1]);
+
+    }
+
+
 }

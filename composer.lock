@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "251d10c0f4e601af738b435e08befd97",
+    "content-hash": "38691fc14620f2fa0a352f803ec42c1a",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1465,6 +1465,46 @@
                 "psysh"
             ],
             "time": "2019-08-07T15:10:45+00:00"
+        },
+        {
+            "name": "laraveldaily/laravel-charts",
+            "version": "0.1.15",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LaravelDaily/laravel-charts.git",
+                "reference": "9deca93241684f3daa2c1852958fb5a8b139ec10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LaravelDaily/laravel-charts/zipball/9deca93241684f3daa2c1852958fb5a8b139ec10",
+                "reference": "9deca93241684f3daa2c1852958fb5a8b139ec10",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "LaravelDaily\\LaravelCharts\\LaravelChartsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "LaravelDaily\\LaravelCharts\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Povilas Korop",
+                    "email": "povilas@laraveldaily.com"
+                }
+            ],
+            "description": "Create charts and reports from Laravel",
+            "time": "2020-03-18T08:50:31+00:00"
         },
         {
             "name": "lcobucci/jwt",

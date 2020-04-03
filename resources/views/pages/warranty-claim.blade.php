@@ -43,7 +43,7 @@
             <!-- Validation wizard -->
             <div class="row">
                 <div class="col-12">
-                    <form method="post" action="{{route('warrantyclaimPost')}}">
+                    <form method="post" action="{{route('WarrantyCheck')}}">
                         @csrf
                         <div class="card">
                             <div class="card-body">
@@ -51,7 +51,7 @@
 
                                     <div class="col-md-6">
                                         <div class="example">
-                                            <h5 class="box-title m-t-30">Product Sl No./ID</h5>
+                                            <h5 class="box-title m-t-30">Enter Invoice No :</h5>
                                             <div class="input-group">
                                                 <input type="text" class="form-control" placeholder="Product Invoice" name="invoice_no" >
                                             </div>

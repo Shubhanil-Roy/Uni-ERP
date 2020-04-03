@@ -23,7 +23,9 @@ Route::post('addDealer', 'API\AdminController@addDealer');
 Route::post('addInvoice', 'API\AdminController@addProductInvoice')/*->middleware('auth:dealer-api')*/;
 
 
-
+   // Route::post('salesformPost', 'Admin\AdminController@salesformPost')->name('salesformPost')->middleware('auth:admin');
+ // Route::get('stock/chart', 'Admin\AdminController@chart')->name('stock/chart')->middleware('auth:admin');
+ // Route::get('chart', 'Admin\AdminController@chart')->name('chart')->middleware('auth:admin');
 
 Route::get('allManufacture', 'API\AdminController@allManufacture');
 Route::get('allproducts', 'API\AdminController@allproducts');
